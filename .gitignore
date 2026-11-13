@@ -53,3 +53,7 @@ ingest_cxr.py
 .deployment/
 .superdesign/
 .local-data/
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
