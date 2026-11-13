@@ -45,10 +45,17 @@ def distance_km(a, b, c, d):
 
 @functools.lru_cache(maxsize=64)
 def _nearby(lat, lng, radius, cache_period):
-    query = f'[out:json][timeout:25];nwr(around:{radius},{lat},{lng})["amenity"="hospital"];out center tags;'
-    response = requests.post("https://overpass-api.de/api/interpreter", data={"data": query}, headers=HEADERS, timeout=35)
+    global _last_geocode
+    delta_lat = radius / 111320
+    delta_lng = delta_lat / max(.15, math.cos(math.radians(lat)))
+    viewbox = f"{max(-180,lng-delta_lng)},{min(89.9,lat+delta_lat)},{min(180,lng+delta_lng)},{max(-89.9,lat-delta_lat)}"
+    with _geocode_lock:
+        time.sleep(max(0, 1.05 - (time.monotonic() - _last_geocode)))
+        response = requests.get("https://nominatim.openstreetmap.org/search", params={"q":"hospital","viewbox":viewbox,"bounded":1,"format":"jsonv2","limit":15,"extratags":1}, headers=HEADERS, timeout=20)
+        _last_geocode = time.monotonic()
     response.raise_for_status()
-    return response.json().get("elements", [])
+    # A directory of best matches, not an exhaustive inventory of the area.
+    return [{"type":row["osm_type"],"id":row["osm_id"],"lat":float(row["lat"]),"lon":float(row["lon"]),"tags":{"name":row.get("name") or row.get("display_name","").split(",")[0],**(row.get("extratags") or {})}} for row in response.json() if row.get("type")=="hospital"]
 
 def find_hospitals(diagnosis, location, equipment=None, max_travel=None, max_distance=None):
     lat, lng = locate(location)
@@ -66,6 +73,8 @@ def find_hospitals(diagnosis, location, equipment=None, max_travel=None, max_dis
         if x is None or y is None:
             continue
         distance = distance_km(lat, lng, x, y)
+        if distance > miles * 1.609344:
+            continue
         source = f'https://www.openstreetmap.org/{element["type"]}/{element["id"]}'
         specialty = tags.get("healthcare:speciality", "").replace(";", ", ")
         reason = f"Hospital listed in OpenStreetMap, {distance:.1f} km straight-line distance from the search location."

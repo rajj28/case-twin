@@ -276,10 +276,17 @@ export function AgenticCopilotPanel({
     // ── File handling ─────────────────────────────────────────────────────
 
     const addFiles = useCallback((incoming: FileList | File[]) => {
-        const arr = Array.from(incoming);
+        const provided = Array.from(incoming);
+        const arr = provided.filter(file => /\.(jpe?g|png|webp|txt)$/i.test(file.name) && file.size <= 10 * 1024 * 1024);
+        if (arr.length !== provided.length) {
+            setState(prev => ({ ...prev, messages: [...prev.messages, {
+                id: `file-limit-${Date.now()}`, role: "assistant", type: "text",
+                content: "Use a JPG, PNG, WEBP image or a TXT note, up to 10 MB per file. Convert other formats before uploading."
+            } as OrchestratorMessage] }));
+        }
         setPendingFiles(prev => [...prev, ...arr]);
         // Notify parent of any imaging file for future search
-        const imgFile = arr.find(f => f.type.startsWith("image/") || f.name.endsWith(".dcm"));
+        const imgFile = arr.find(f => /\.(jpe?g|png|webp)$/i.test(f.name));
         if (imgFile) onFileForSearch(imgFile);
     }, [onFileForSearch]);
 
@@ -498,7 +505,7 @@ export function AgenticCopilotPanel({
                 <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[var(--mr-action)] bg-[rgba(10,103,143,0.06)]">
                     <UploadCloud className="h-10 w-10 text-[var(--mr-action)]" />
                     <p className="mt-2 text-sm font-semibold text-[var(--mr-action)]">Drop files to add them</p>
-                    <p className="text-xs text-[var(--mr-text-secondary)]">DICOM, Images, PDF, DOCX, TXT</p>
+                    <p className="text-xs text-[var(--mr-text-secondary)]">JPG, PNG, WEBP images and TXT notes · 10 MB per file</p>
                 </div>
             )}
 
@@ -529,7 +536,7 @@ export function AgenticCopilotPanel({
                         ref={fileInputRef}
                         type="file"
                         multiple
-                        accept=".jpg,.jpeg,.png,.webp,.dcm,.pdf,.docx,.txt,.json"
+                        accept=".jpg,.jpeg,.png,.webp,.txt"
                         className="hidden"
                         onChange={e => { addFiles(e.target.files ?? []); if (e.target) e.target.value = ""; }}
                     />

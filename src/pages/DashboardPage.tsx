@@ -1346,7 +1346,7 @@ function RouteScreen({
                         <h5 className="font-semibold text-[14px] text-zinc-900 mb-1">{selectedHospital.name}</h5>
                         <p className="text-[14px] text-zinc-600 leading-relaxed mb-3">
                           We couldn't automatically find specific physician profiles for {patientCondition} at this facility.
-                          However, {selectedHospital.name} is a highly capable medical center for your condition.
+                          The directory listing does not verify this facility's equipment, specialist availability, or suitability for the condition.
                         </p>
                         <div className="space-y-1.5 mt-4">
                           <p className="text-[13px] font-semibold text-zinc-900 uppercase tracking-wide">Next steps</p>
@@ -1753,9 +1753,7 @@ export function DashboardPage() {
       try {
         let fileToSearch = uploadedFile;
         if (!fileToSearch) {
-          // Fallback dummy 1x1 image so backend receives a valid file
-          const dummyImg = new Blob([new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0, 0, 0, 31, 21, 196, 137, 0, 0, 0, 11, 73, 68, 65, 84, 8, 153, 99, 248, 15, 4, 0, 9, 251, 3, 253, 153, 226, 18, 172, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130])], { type: 'image/png' });
-          fileToSearch = new File([dummyImg], "dummy.png", { type: "image/png" });
+          throw new Error("Upload a chest X-ray in the Clinical Copilot before finding similar cases.");
         }
 
         const profileData = useDashboardStore.getState().profile;

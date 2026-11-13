@@ -76,7 +76,7 @@ export function createInitialState(): OrchestratorState {
         phase: "greeting",
         messages: [
             assistantMsg(
-                "Clinical Copilot online. I'll guide you through building a complete case profile.\n\nDrop imaging studies (DICOM, JPG, PNG) or documents (PDF, DOCX, TXT) directly into the chat, or paste a clinical note. I'll extract, structure, and ask follow-up questions until the profile is ready for routing.",
+                "Clinical Copilot online. I'll guide you through building a complete case profile.\n\nDrop a JPG, PNG, or WEBP chest X-ray and a TXT note directly into the chat, or paste a clinical note. I'll extract, structure, and ask follow-up questions until the profile is ready for routing. This research demo includes a small public case corpus.",
             ),
         ],
         currentQuestion: null,
