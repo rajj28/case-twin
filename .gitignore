@@ -44,3 +44,7 @@ backend/env.yaml
 
 dataset_cxr_primary.json
 ingest_cxr.py
+# Local deployment credentials
+.deploy.env
+.deploy.env.*
+!.deploy.env.example

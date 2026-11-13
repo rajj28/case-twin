@@ -52,3 +52,7 @@ ingest_*.py
 # Docs
 README.md
 docs/
+
+# Local deployment credentials
+.deploy.env
+.deploy.env.*
