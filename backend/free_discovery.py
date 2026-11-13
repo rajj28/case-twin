@@ -116,7 +116,7 @@ def _public_url(url):
         raise ValueError("Only public hospital websites can be inspected.")
     return url
 
-def find_physicians(url, diagnosis, hospital_name, location=""):
+def _schema_physicians(url, diagnosis, hospital_name, location=""):
     current = _public_url(url)
     for _ in range(4):
         response = requests.get(current, headers=HEADERS, timeout=15, stream=True, allow_redirects=False)
@@ -155,3 +155,54 @@ def find_physicians(url, diagnosis, hospital_name, location=""):
         unique={person["name"]:person for person in people}
         return {"specialists":list(unique.values())[:5],"source_url":current,"message":"Only named clinicians found in the website's structured data are included." if unique else "No named clinicians were found in this page's structured data. Open the hospital's physician directory directly."}
     raise ValueError("Hospital website redirected too many times.")
+
+
+def _same_system(candidate, origin):
+    host=(urlparse(candidate).hostname or "").lower()
+    base=(urlparse(origin).hostname or "").lower().removeprefix("www.")
+    return bool(base) and (host==base or host.endswith("."+base))
+
+@functools.lru_cache(maxsize=64)
+def _reader_physicians(url, hospital_name, cache_period):
+    """Read at most two public pages and retain only explicit named profile links."""
+    queue=[url];visited=set();people=[]
+    for _ in range(2):
+        if not queue:break
+        target=_public_url(queue.pop(0))
+        if target in visited:continue
+        visited.add(target)
+        response=requests.get("https://r.jina.ai/"+target,headers={**HEADERS,"X-Timeout":"12","X-Robots-Txt":"*"},timeout=18)
+        response.raise_for_status()
+        text=response.text[:180000]
+        links=re.findall(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)",text)
+        for title,link in links:
+            if not _same_system(link,url):continue
+            parsed=urlparse(link);path=parsed.path.lower().rstrip("/")
+            is_directory=any(part in link.lower() for part in ("find-a-doctor","find-a-provider","/doctors","/physicians")) or (parsed.hostname or "").startswith("doctors.")
+            if not is_directory:continue
+            if re.search(r"\b(find|search|directory)\b",title,re.I):
+                if link not in visited and link not in queue:queue.append(link)
+                continue
+            if path in ("","/doctors","/physicians","/find-a-doctor","/find-a-provider"):continue
+            cleaned=re.sub(r"[*_]+","",title).strip()
+            if not 5<=len(cleaned)<=100 or not 2<=len(cleaned.split())<=9:continue
+            if re.search(r"\b(find|search|more|view|meet|services|hospital|health|directory|image|physicians|doctors|profile)\b",cleaned,re.I):continue
+            if not re.fullmatch(r"[A-Za-zÀ-ž'’.,()\-\s]+",cleaned):continue
+            credential=re.search(r"\b(MD|M\.D\.|DO|D\.O\.|MBBS|PhD)\b",cleaned)
+            people.append({"name":cleaned,"specialty":"Not documented on the directory listing","credentials":credential.group(0) if credential else "Not documented","context":f"Profile link published in this health system's directory. Affiliation with {hospital_name or 'the selected hospital'} and current availability are unverified.","url":link,"phone":""})
+        if people:break
+    unique={p["url"]:p for p in people}
+    return list(unique.values())[:5]
+
+def find_physicians(url, diagnosis, hospital_name, location=""):
+    _public_url(url)
+    try:
+        result=_schema_physicians(url,diagnosis,hospital_name,location)
+        if result.get("specialists"):return result
+    except (requests.RequestException,ValueError,KeyError,TypeError):
+        pass
+    try:
+        people=_reader_physicians(url,hospital_name,int(time.time()//3600))
+    except (requests.RequestException,ValueError,KeyError,TypeError):
+        people=[]
+    return {"specialists":people,"source_url":url,"message":"Profile links are source-backed; individual hospital affiliation and availability are unverified." if people else "This website did not expose named physician profiles. Open the official physician directory or contact the hospital directly.","directory_available":bool(people)}

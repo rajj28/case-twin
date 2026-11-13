@@ -4,7 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
 from fastapi import FastAPI
@@ -12,6 +12,8 @@ from fastapi.testclient import TestClient
 from PIL import Image
 from frontend import mount_frontend
 import hf_space
+import free_discovery
+from requests import HTTPError
 
 class Response:
     def __init__(self, payload=None, lines=(), status=200):
@@ -51,5 +53,25 @@ class DeploymentTests(unittest.TestCase):
     @patch("hf_space.call_space",return_value={"image_embedding":[0.0]*1152})
     def test_zero_vectors_are_rejected(self,call):
         with self.assertRaises(RuntimeError):hf_space.embed_image(Image.new("RGB",(2,2)))
+
+    @patch("free_discovery._public_url",side_effect=lambda url:url)
+    @patch("free_discovery._schema_physicians",side_effect=HTTPError())
+    @patch("free_discovery._reader_physicians",side_effect=HTTPError())
+    def test_unreadable_directory_returns_honest_empty_result(self,reader,schema,url):
+        result=free_discovery.find_physicians("https://hospital.example","condition","Hospital")
+        self.assertEqual(result["specialists"],[])
+        self.assertFalse(result["directory_available"])
+        self.assertIn("official physician directory",result["message"])
+
+    @patch("free_discovery._public_url",side_effect=lambda url:url)
+    @patch("free_discovery.requests.get")
+    def test_reader_profiles_require_published_named_links(self,get,url):
+        response=Mock(text="[Dr. Jane Doe, MD](https://hospital.example/doctors/jane-doe)\n[Find a Doctor](https://hospital.example/doctors/)")
+        get.return_value=response
+        free_discovery._reader_physicians.cache_clear()
+        people=free_discovery._reader_physicians("https://hospital.example","Hospital",0)
+        self.assertEqual(len(people),1)
+        self.assertEqual(people[0]["name"],"Dr. Jane Doe, MD")
+        self.assertIn("unverified",people[0]["context"])
 
 if __name__ == "__main__":unittest.main()
