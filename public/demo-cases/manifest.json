@@ -1,0 +1,833 @@
+[
+  {
+    "file": "PMC2249601_1752-1947-2-18-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2249601_01",
+      "image_id": "file_0009900",
+      "diagnosis": "Primary monophasic synovial sarcoma presenting as a pulmonary mass: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 67.0,
+      "gender": "Female",
+      "image_url": "/demo-cases/PMC2249601_1752-1947-2-18-1_undivided_1_1.webp",
+      "case_text": "A 67-year-old woman was referred for investigation of a peripheral opacity in the left lung lower lobe, which was discovered incidentally on a chest radiograph. Thirteen years earlier she had undergone a radical left-sided mastectomy for breast cancer, followed by a three-year course of adjuvant endocrine therapy with tamoxifen. No adjuvant radiation therapy or chemotherapy was given after the mastectomy. Until the time of presentation, no evidence of disease recurrence had been found.\nThe patient was a housewife, did not smoke or abuse alcohol, had no known toxic exposures and denied any family history of malignancies. She was in good general health and well nourished. Physical examination was negative apart from a post-surgical chest scar. The results of blood tests, standard biochemical tests, urine analysis, c-ANCA, p-ANCA, tumor markers and arterial blood gas analysis were normal.\nThe chest radiograph (Figure 1) revealed a well-demarcated, non-cavitating, 3 cm in diameter peripheral opacity in the left lower lobe, with obtuse angles between the lesion and the pleura, and no other abnormalities. The lesion was not apparent on a chest radiograph performed one year previously. Chest computed tomography (CT), (Figure 2) confirmed a 3 x 4 cm, oval-shaped, well-delineated peripheral mass in the left lower lobe, abutting the pleura, homogenous in attenuation and no evidence of mediastinal or axillary adenopathy. CT of the brain and abdomen revealed no pathological findings. Pulmonary function studies were normal. Bronchoalveolar lavage and bronchial brushing specimens, obtained during bronchoscopy, were negative for malignancy. The CT-guided fine needle aspirate from the mass revealed clusters of neoplastic cells of unclear affiliation, strongly positive on immunostaining for vimentin and negative for carcino-embryonic antigen (CEA) and epithelial membrane antigen (EMA).\nFinally, a left thoracotomy was performed, revealing a tumor in the outer part of the left lower lobe, which did not infiltrate the visceral pleura. Subsequently, a left lower lobectomy with typical excision of the satellite lymph nodes was completed. Pathological examination revealed a well-circumscribed, whitish, soft tumor measuring 2.5 x 3 x 2 cm. Microscopic examination showed a spindle cell neoplasm, with slit-like spaces and normal adjacent lung parenchyma (Figure 3). Immunohistochemical staining was positive for CD99 and Bcl-2, while staining for EMA, CK19, CK17, BerEP4, S-100 and thrombomodullin was negative. The above findings were compatible with a monophasic spindle cell type synovial sarcoma in the lung (Figure 4). The lymph nodes showed lesions of reactive lymphadenitis, and the specimens of pleura showed edema and low-grade inflammation.",
+      "patient": {
+        "age_years": 67.0,
+        "sex": "Female",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 67-year-old woman was referred for investigation of a peripheral opacity in the left lung lower lobe, which was discovered incidentally on a chest radiograph. Thirteen years earlier she had undergone a radical left-sided mastectomy for breast cancer, followed by a three-year course of adjuvant endocrine therapy with tamoxifen. No adjuvant radiation therapy or chemotherapy was given after the mastectomy. Until the time of presentation, no evidence of disease recurrence had been found.\nThe patient was a housewife, did not smoke or abuse alcohol, had no known toxic exposures and denied any family history of malignancies. She was in good general health and well nourished. Physical examination was negative apart from a post-surgical chest scar. The results of blood tests, standard biochemical tests, urine analysis, c-ANCA, p-ANCA, tumor markers and arterial blood gas analysis were normal.\nThe chest radiograph (Figure 1) revealed a well-demarcated, non-cavitating, 3 cm in diameter peripheral opacity in the left lower lobe, with obtuse angles between the lesion and the pleura, and no other abnormalities. The lesion was not apparent on a chest radiograph performed one year previously. Chest computed tomography (CT), (Figure 2) confirmed a 3 x 4 cm, oval-shaped, well-delineated peripheral mass in the left lower lobe, abutting the pleura, homogenous in attenuation and no evidence of mediastinal or axillary adenopathy. CT of the brain and abdomen revealed no pathological findings. Pulmonary function studies were normal. Bronchoalveolar lavage and bronchial brushing specimens, obtained during bronchoscopy, were negative for malignancy. The CT-guided fine needle aspirate from the mass revealed clusters of neoplastic cells of unclear affiliation, strongly positive on immunostaining for vimentin and negative for carcino-embryonic antigen (CEA) and epithelial membrane antigen (EMA).\nFinally, a left thoracotomy was performed, revealing a tumor in the outer part of the left lower lobe, which did not infiltrate the visceral pleura. Subsequently, a left lower lobectomy with typical excision of the satellite lymph nodes was completed. Pathological examination revealed a well-circumscribed, whitish, soft tumor measuring 2.5 x 3 x 2 cm. Microscopic examination showed a spindle cell neoplasm, with slit-like spaces and normal adjacent lung parenchyma (Figure 3). Immunohistochemical staining was positive for CD99 and Bcl-2, while staining for EMA, CK19, CK17, BerEP4, S-100 and thrombomodullin was negative. The above findings were compatible with a monophasic spindle cell type synovial sarcoma in the lung (Figure 4). The lymph nodes showed lesions of reactive lymphadenitis, and the specimens of pleura showed edema and low-grade inflammation."
+      },
+      "assessment": {
+        "diagnosis_primary": "Primary monophasic synovial sarcoma presenting as a pulmonary mass: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2249601_1752-1947-2-18-1_undivided_1_1.webp",
+        "caption": "Chest Radiograph."
+      },
+      "summary": {
+        "one_liner": "Chest Radiograph.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2249601",
+        "pmid": "18218098",
+        "doi": "10.1186/1752-1947-2-18",
+        "article_title": "Primary monophasic synovial sarcoma presenting as a pulmonary mass: a case report",
+        "journal": "J Med Case Rep",
+        "year": "2008",
+        "authors": [
+          "Charalampos M Mermigkis",
+          "Antony Kopanakis",
+          "George Patentalakis",
+          "Vlassis Polychronopoulos",
+          "Michael Patentalakis"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2249601/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2257945_1477-7819-6-7-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2257945_01",
+      "image_id": "file_0009941",
+      "diagnosis": "Pulmonary echinococcosis mimicking multiple lung metastasis of breast cancer: the role of fluoro-deoxy-glucose positron emission tomography",
+      "diagnosis_label_source": "publication_title",
+      "age": 56.0,
+      "gender": "Female",
+      "image_url": "/demo-cases/PMC2257945_1477-7819-6-7-1_undivided_1_1.webp",
+      "case_text": "A 56-year old woman admitted with a breast lump, chronic cough and chest pain. There was no medical or family history of note. On physical examination we discovered a palpable mass in the medial outer quadrant of the right breast and ipsilateral palpable axillary and supraclavicular lymph nodes. Mammography and ultrasound revealed a 2 cm nodule with irregular border including micro calcifications which was confirmed to be invasive ductal carcinoma by a fine needle biopsy. Chest radiography and computed tomography showed multiple nodules and masses involving both lungs highly suspicious to be metastatic in origin (Figure 1). Positron Emission Tomography (PET) scans showed increased Fluoro-deoxy-glucose (FDG) uptake in the breast cancer and axillar, supraclavicular lymph nodes as it's expected but there is no FDG uptake in pulmonary lesions suggesting a benign origin (Figure 2). She was coming from the east part of the country where hydatid disease is endemic. Positive indirect hemaglutination test supported the diagnosis of pulmonary echinococcosis. Chemotherapy for Stage IIIC breast cancer (Adriamycin, cyclophosphamid and paclitaxel) and albendazol treatment began for the patient.",
+      "patient": {
+        "age_years": 56.0,
+        "sex": "Female",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 56-year old woman admitted with a breast lump, chronic cough and chest pain. There was no medical or family history of note. On physical examination we discovered a palpable mass in the medial outer quadrant of the right breast and ipsilateral palpable axillary and supraclavicular lymph nodes. Mammography and ultrasound revealed a 2 cm nodule with irregular border including micro calcifications which was confirmed to be invasive ductal carcinoma by a fine needle biopsy. Chest radiography and computed tomography showed multiple nodules and masses involving both lungs highly suspicious to be metastatic in origin (Figure 1). Positron Emission Tomography (PET) scans showed increased Fluoro-deoxy-glucose (FDG) uptake in the breast cancer and axillar, supraclavicular lymph nodes as it's expected but there is no FDG uptake in pulmonary lesions suggesting a benign origin (Figure 2). She was coming from the east part of the country where hydatid disease is endemic. Positive indirect hemaglutination test supported the diagnosis of pulmonary echinococcosis. Chemotherapy for Stage IIIC breast cancer (Adriamycin, cyclophosphamid and paclitaxel) and albendazol treatment began for the patient."
+      },
+      "assessment": {
+        "diagnosis_primary": "Pulmonary echinococcosis mimicking multiple lung metastasis of breast cancer: the role of fluoro-deoxy-glucose positron emission tomography"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2257945_1477-7819-6-7-1_undivided_1_1.webp",
+        "caption": "Chest radiography shows multiple nodules and masses involving both lungs."
+      },
+      "summary": {
+        "one_liner": "Chest radiography shows multiple nodules and masses involving both lungs.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2257945",
+        "pmid": "18208584",
+        "doi": "10.1186/1477-7819-6-7",
+        "article_title": "Pulmonary echinococcosis mimicking multiple lung metastasis of breast cancer: the role of fluoro-deoxy-glucose positron emission tomography",
+        "journal": "World J Surg Oncol",
+        "year": "2008",
+        "authors": [
+          "Yavuz Kurt",
+          "Ilker Sücüllü",
+          "Ali Ilker Filiz",
+          "Muammer Urhan",
+          "Mehmet Levhi Akin"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2257945/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2267468_1477-7819-6-8-2_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2267468_01",
+      "image_id": "file_0010000",
+      "diagnosis": "Laparotomy enables retrograde dilatation and stent placement for malignant esophago-respiratory fistula",
+      "diagnosis_label_source": "publication_title",
+      "age": 66.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2267468_1477-7819-6-8-2_undivided_1_1.webp",
+      "case_text": "A 66-year-old man presented with severe dysphagia, weight loss and recurrent pulmonary infections due to an esophago-tracheal fistula. Due to squamous cell carcinoma of the esophagus 17 month ago, he had undergone esophageal resection and interposition of a gastric tube with cervical anastomosis. This treatment was followed by adjuvant radio-chemotherapy (50 Gy with 5-FU and Cisplatin). The first signs of dysphagia developed 8 weeks before admission to our hospital. Initial endoscopic therapy revealed local tumor recurrence beginning at 21 cm from front incisors, but failed to provide palliation of dysphagia. The distal end of the stenosis could not be measured precisely due to high grade stenosis which could not be passed endoscopically. Though intravenous hyperalimentation was administered, the patient kept on losing weight. Furthermore recurrent pulmonary infections occurred and swallowing of salvia, without coughing became impossible. For palliative surgical treatment the patient was transferred to our institution. Unfortunately we found the esophageal lumen to be completely obstructed by recurrent tumor. Moreover the tumor had invaded the trachea and had caused an esophago-tracheal fistula. The fistula itself could not be seen endoscopically, but was found by gastrographin swallow and CT-scan (Figure 1, Figure 2). According to CT-scan we estimated it to be located at about 2-3 cm distal from the beginning of the stenosis. The recurrent mediastinal tumor was estimated to have a length of 6 cm and infiltrated the gastric tube.\nAll endoscopic attempts to pass the obstruction failed, because the guide wire only entered the associated esophago-tracheal fistula. Therefore a retrograde endoscopic approach was undertaken. According to the previous esophageal resection with interposition of a gastric tube, radiologically guided percutaneous gastrostomy techniques had to be rejected. Retrograde access to the esophageal lumen was obtained by open surgery and a duodenotomy (Figure 3). Through an endoscope a guide wire (Terumo, RF-GA35403M Standard, 0.035 inch) was pushed up and the esophageal obstruction was traversed, which simultaneously was monitored by a transnasal endoscope. Using a guiding catheter the esophageal stenosis was dilated and a naso-jejunal triluminal feeding tube was placed into the first jejunal loop. Subsequently the longitudinal duodenal incision was closed in a transverse fashion. Before closure of the abdominal wall a jejunostomy catheter was implanted to ensure sufficient enteral nutrition. 72 hours later, in a second step further endoscopic guided dilatation of the esophageal stenosis was repeated twice. Using a stiff wire (0.035 inch) placed under fluoroscopic control subsequent guide wired dilatation, up to 12.8 mm according to the method of Savary, was performed. In a third step a nitinol self-expanding fully covered stent, the so called Choo stent (M.I. Tech/MTW), was placed across the fistula under radiological and endoscopic control (Figure 4). After successful placement of the stent the upper end was located directly proximal from the stenosis at about 20 cm from frontal incisors and completely traversed the whole stenosis. As a result the patient felt neither foreign body sensation nor pain. A follow up contrast study, performed on the 4th day after stent placement, showed the stent to be almost completely expanded without any signs of persisting leakage. Thereafter the patient was allowed to swallow liquid food, although only a small volume could be swallowed at a time. A few days later swallowing of semi solids and hypercaloric liquid food was possible and the patient was discharged.\nFollow-up analyses revealed that the patient died 158 days after our treatment due to severe pleural effusion and diffuse pulmonary metastasis.",
+      "patient": {
+        "age_years": 66.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 66-year-old man presented with severe dysphagia, weight loss and recurrent pulmonary infections due to an esophago-tracheal fistula. Due to squamous cell carcinoma of the esophagus 17 month ago, he had undergone esophageal resection and interposition of a gastric tube with cervical anastomosis. This treatment was followed by adjuvant radio-chemotherapy (50 Gy with 5-FU and Cisplatin). The first signs of dysphagia developed 8 weeks before admission to our hospital. Initial endoscopic therapy revealed local tumor recurrence beginning at 21 cm from front incisors, but failed to provide palliation of dysphagia. The distal end of the stenosis could not be measured precisely due to high grade stenosis which could not be passed endoscopically. Though intravenous hyperalimentation was administered, the patient kept on losing weight. Furthermore recurrent pulmonary infections occurred and swallowing of salvia, without coughing became impossible. For palliative surgical treatment the patient was transferred to our institution. Unfortunately we found the esophageal lumen to be completely obstructed by recurrent tumor. Moreover the tumor had invaded the trachea and had caused an esophago-tracheal fistula. The fistula itself could not be seen endoscopically, but was found by gastrographin swallow and CT-scan (Figure 1, Figure 2). According to CT-scan we estimated it to be located at about 2-3 cm distal from the beginning of the stenosis. The recurrent mediastinal tumor was estimated to have a length of 6 cm and infiltrated the gastric tube.\nAll endoscopic attempts to pass the obstruction failed, because the guide wire only entered the associated esophago-tracheal fistula. Therefore a retrograde endoscopic approach was undertaken. According to the previous esophageal resection with interposition of a gastric tube, radiologically guided percutaneous gastrostomy techniques had to be rejected. Retrograde access to the esophageal lumen was obtained by open surgery and a duodenotomy (Figure 3). Through an endoscope a guide wire (Terumo, RF-GA35403M Standard, 0.035 inch) was pushed up and the esophageal obstruction was traversed, which simultaneously was monitored by a transnasal endoscope. Using a guiding catheter the esophageal stenosis was dilated and a naso-jejunal triluminal feeding tube was placed into the first jejunal loop. Subsequently the longitudinal duodenal incision was closed in a transverse fashion. Before closure of the abdominal wall a jejunostomy catheter was implanted to ensure sufficient enteral nutrition. 72 hours later, in a second step further endoscopic guided dilatation of the esophageal stenosis was repeated twice. Using a stiff wire (0.035 inch) placed under fluoroscopic control subsequent guide wired dilatation, up to 12.8 mm according to the method of Savary, was performed. In a third step a nitinol self-expanding fully covered stent, the so called Choo stent (M.I. Tech/MTW), was placed across the fistula under radiological and endoscopic control (Figure 4). After successful placement of the stent the upper end was located directly proximal from the stenosis at about 20 cm from frontal incisors and completely traversed the whole stenosis. As a result the patient felt neither foreign body sensation nor pain. A follow up contrast study, performed on the 4th day after stent placement, showed the stent to be almost completely expanded without any signs of persisting leakage. Thereafter the patient was allowed to swallow liquid food, although only a small volume could be swallowed at a time. A few days later swallowing of semi solids and hypercaloric liquid food was possible and the patient was discharged.\nFollow-up analyses revealed that the patient died 158 days after our treatment due to severe pleural effusion and diffuse pulmonary metastasis."
+      },
+      "assessment": {
+        "diagnosis_primary": "Laparotomy enables retrograde dilatation and stent placement for malignant esophago-respiratory fistula"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2267468_1477-7819-6-8-2_undivided_1_1.webp",
+        "caption": "Gastrographin contrast swallow showed that oral contrast medium has entered the left sided tracheobronchial system (arrow)."
+      },
+      "summary": {
+        "one_liner": "Gastrographin contrast swallow showed that oral contrast medium has entered the left sided tracheobronchial system (arrow).",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2267468",
+        "pmid": "18221555",
+        "doi": "10.1186/1477-7819-6-8",
+        "article_title": "Laparotomy enables retrograde dilatation and stent placement for malignant esophago-respiratory fistula",
+        "journal": "World J Surg Oncol",
+        "year": "2008",
+        "authors": [
+          "Alexander Rehders",
+          "Kenko Cupisti",
+          "Marcus Schmitt",
+          "Marc A Renter",
+          "Patrick Kröpil",
+          "Ozcan Iskender",
+          "Wolfram T Knoefel"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2267468/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2556736_cc6109-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2556736_01",
+      "image_id": "file_0010014",
+      "diagnosis": "Chest computed tomography with multiplanar reformatted images for diagnosing traumatic bronchial rupture: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 19.0,
+      "gender": "Unknown",
+      "image_url": "/demo-cases/PMC2556736_cc6109-1_undivided_1_1.webp",
+      "case_text": "A 19-year-old motor biker was involved in a high-velocity accident against a fixed obstacle. At the scene, the patient was unconscious (Coma Glasgow Scale = 5/15) and severely hypoxemic (oxygen saturation = 80%) with a cervicothoracic emphysema. The patient was intubated, mechanically ventilated and transported to our Level I Trauma Centre. As shown in Figure 1, bedside frontal chest radiography showed bilateral and compressive pneumothorax, pneumomediastinum and extensive subcutaneous emphysema. Arterial oxygenation immediately improved following emergency chest tube placement, and a new chest radiography showed incomplete re-expansion of the right lung with a persistent air leak despite continuous suction.\nThe patient was then transported to the Department of Radiology for a total body scan (16 slices; Lightspeed GE, General Electric, Milwaukee, WI, United States of America)). The following injuries were diagnosed: brain damage, related to a left parietal contusion with mild subarachnoid hemorrhage (Fisher II); and bilateral pneumothorax with a small hemothorax predominating on the left side, pneumomediastinum, pulmonary interstitial emphysema (Macklin effect), pneumopericardium, subcutaneous emphysema and multiple rib fractures (Figure 2). It has to be pointed out that the right-upper-lobe bronchus was displaced posteriorly without a characteristic CT fallen sign as described by Tack and colleagues. Other concomitant injuries were: myocardial contusion, diagnosed as the presence of sinus tachycardia with an anterior and septal elevation of the ST-segment on EKG (electrocardiogram) and an initial cardiac troponin I value of 10.25 IU (normal value, <0.04 IU); fracture of the first thoracic vertebra without neurological consequence; and right femoral fracture. Orthopedic surgical repair was performed without delay.\nTracheobronchial injury was suspected because the bedside chest radiography performed after orthopedic surgery showed persisting right apical pneumothorax with continuous air leakage and extensive cervicothoracic emphysema. The diagnosis, however, could not be confirmed by bronchoscopy because of the rapid drop in oxygen saturation and the abundant bleeding of the respiratory tract. Consequently, a new CT scan was performed using a technique specifically aimed at visualizing the airways. After contrast material injection, 1.25 mm CT sections at 0.6 mm intervals were acquired and 3D images were obtained following multiplanar reformation.\nThe axial slice demonstrated a parietal defect of the posterior wall of the intermediate trunk (Figure 3). Multiple oblique reformations of the right lung and 3D reconstruction of the airways brought definitive evidence of a complete right bronchial disruption just below the origin of the upper right bronchus associated with a partial collapse of the right-middle lobe and of the right-lower lobe (Figure 4). A surgical procedure was decided upon, and confirmed a complete disruption of the right bronchus immediately below the origin of the right upper bronchus with an atelectasis of the right middle and inferior lobes. End-to-end anastomosis of the disrupted bronchus was performed through a right thoracotomy and resulted in an immediate re-aeration of the lower lobe, a cessation of the air leak through the right chest tube and a rapid regression of the subcutaneous emphysema, whereas the right-middle lobe remained atelectatic. The decision to perform anastomosis rather than lung resection was based on the patient's young age, the early diagnosis (<24 hours) and the quality of bronchial tissue. Because an anatomical sleeve was present keeping the lower lobe partially aerated, a re-aeration of the middle lobe was expected after re-establishing bronchial continuity.\nA bronchoscopy performed on the second postoperative day demonstrated a watertight suture with local inflammation. The postoperative course was complicated by early ventilator-associated pneumonia caused by Escherichia coli leading to acute respiratory distress syndrome. Mechanical ventilation with a limited tidal volume, a limited peak airway pressure and a limited positive end expiratory pressure was delivered according to recent recommendations. A second ventilator-associated pneumonia caused by Pseudomonas aeruginosa delayed withdrawal of the patient from mechanical ventilation, which was successfully achieved on day 18.\nA new CT scan was performed on day 22, before the patient left the intensive care unit. Transversal CT sections demonstrated a normal aeration of the right lung whereas 3D reconstruction of the airways demonstrated a short but tight bronchial stenosis located at the site of the initial rupture (Figure 5). In the absence of new respiratory symptoms, prolonged medical supervision was decided upon and the patient left the intensive care unit on day 28 for a rehabilitation center.",
+      "patient": {
+        "age_years": 19.0,
+        "sex": "Unknown",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 19-year-old motor biker was involved in a high-velocity accident against a fixed obstacle. At the scene, the patient was unconscious (Coma Glasgow Scale = 5/15) and severely hypoxemic (oxygen saturation = 80%) with a cervicothoracic emphysema. The patient was intubated, mechanically ventilated and transported to our Level I Trauma Centre. As shown in Figure 1, bedside frontal chest radiography showed bilateral and compressive pneumothorax, pneumomediastinum and extensive subcutaneous emphysema. Arterial oxygenation immediately improved following emergency chest tube placement, and a new chest radiography showed incomplete re-expansion of the right lung with a persistent air leak despite continuous suction.\nThe patient was then transported to the Department of Radiology for a total body scan (16 slices; Lightspeed GE, General Electric, Milwaukee, WI, United States of America)). The following injuries were diagnosed: brain damage, related to a left parietal contusion with mild subarachnoid hemorrhage (Fisher II); and bilateral pneumothorax with a small hemothorax predominating on the left side, pneumomediastinum, pulmonary interstitial emphysema (Macklin effect), pneumopericardium, subcutaneous emphysema and multiple rib fractures (Figure 2). It has to be pointed out that the right-upper-lobe bronchus was displaced posteriorly without a characteristic CT fallen sign as described by Tack and colleagues. Other concomitant injuries were: myocardial contusion, diagnosed as the presence of sinus tachycardia with an anterior and septal elevation of the ST-segment on EKG (electrocardiogram) and an initial cardiac troponin I value of 10.25 IU (normal value, <0.04 IU); fracture of the first thoracic vertebra without neurological consequence; and right femoral fracture. Orthopedic surgical repair was performed without delay.\nTracheobronchial injury was suspected because the bedside chest radiography performed after orthopedic surgery showed persisting right apical pneumothorax with continuous air leakage and extensive cervicothoracic emphysema. The diagnosis, however, could not be confirmed by bronchoscopy because of the rapid drop in oxygen saturation and the abundant bleeding of the respiratory tract. Consequently, a new CT scan was performed using a technique specifically aimed at visualizing the airways. After contrast material injection, 1.25 mm CT sections at 0.6 mm intervals were acquired and 3D images were obtained following multiplanar reformation.\nThe axial slice demonstrated a parietal defect of the posterior wall of the intermediate trunk (Figure 3). Multiple oblique reformations of the right lung and 3D reconstruction of the airways brought definitive evidence of a complete right bronchial disruption just below the origin of the upper right bronchus associated with a partial collapse of the right-middle lobe and of the right-lower lobe (Figure 4). A surgical procedure was decided upon, and confirmed a complete disruption of the right bronchus immediately below the origin of the right upper bronchus with an atelectasis of the right middle and inferior lobes. End-to-end anastomosis of the disrupted bronchus was performed through a right thoracotomy and resulted in an immediate re-aeration of the lower lobe, a cessation of the air leak through the right chest tube and a rapid regression of the subcutaneous emphysema, whereas the right-middle lobe remained atelectatic. The decision to perform anastomosis rather than lung resection was based on the patient's young age, the early diagnosis (<24 hours) and the quality of bronchial tissue. Because an anatomical sleeve was present keeping the lower lobe partially aerated, a re-aeration of the middle lobe was expected after re-establishing bronchial continuity.\nA bronchoscopy performed on the second postoperative day demonstrated a watertight suture with local inflammation. The postoperative course was complicated by early ventilator-associated pneumonia caused by Escherichia coli leading to acute respiratory distress syndrome. Mechanical ventilation with a limited tidal volume, a limited peak airway pressure and a limited positive end expiratory pressure was delivered according to recent recommendations. A second ventilator-associated pneumonia caused by Pseudomonas aeruginosa delayed withdrawal of the patient from mechanical ventilation, which was successfully achieved on day 18.\nA new CT scan was performed on day 22, before the patient left the intensive care unit. Transversal CT sections demonstrated a normal aeration of the right lung whereas 3D reconstruction of the airways demonstrated a short but tight bronchial stenosis located at the site of the initial rupture (Figure 5). In the absence of new respiratory symptoms, prolonged medical supervision was decided upon and the patient left the intensive care unit on day 28 for a rehabilitation center."
+      },
+      "assessment": {
+        "diagnosis_primary": "Chest computed tomography with multiplanar reformatted images for diagnosing traumatic bronchial rupture: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2556736_cc6109-1_undivided_1_1.webp",
+        "caption": "Bedside chest radiography performed immediately after admission. Bilateral pneumothorax (large arrows), pneumomediastinum (thin arrows) and extensive subcutaneous emphysema are visible."
+      },
+      "summary": {
+        "one_liner": "Bedside chest radiography performed immediately after admission. Bilateral pneumothorax (large arrows), pneumomediastinum (thin arrows) and extensive subcutaneous emphysema are visible.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2556736",
+        "pmid": "17767714",
+        "doi": "10.1186/cc6109",
+        "article_title": "Chest computed tomography with multiplanar reformatted images for diagnosing traumatic bronchial rupture: a case report",
+        "journal": "Crit Care",
+        "year": "2007",
+        "authors": [
+          "Morgan Le Guen",
+          "Catherine Beigelman",
+          "Belaid Bouhemad",
+          "Yang Wenjïe",
+          "Frederic Marmion",
+          "Jean-Jacques Rouby"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2556736/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2627309_eplasty09e01_fig4_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2627309_01",
+      "image_id": "file_0010088",
+      "diagnosis": "Case report: treatment of severe subcutaneous emphysema with a negative pressure wound therapy dressing",
+      "diagnosis_label_source": "publication_title",
+      "age": 70.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2627309_eplasty09e01_fig4_undivided_1_1.webp",
+      "case_text": "The patient is a 70-year-old African American man with a history of bullous emphysema who presented with a 3-week history of severe left-sided chest pain to the emergency department. He had undergone a left upper lobe bullectomy at an outside associated institution 1 month prior to presentation for macrobullous emphysema with 4 prior spontaneous pneumothoraces. Chest computed tomography scan in the emergency department was unremarkable with no signs of pneumothorax, pulmonary embolism (PE), or pneumonia. Results from electrocardiographic and routine laboratory studies were within normal limits. The patient was admitted to the medical service for pain control and started on a patient controlled analgesia pump.\nApproximately 48 hours after admission, the patient experienced an acute increase in chest pain and became tachycardic, tachypneic, and desaturated to 60% by pulse oximeter on nonrebreather oxygen supplementation. He was emergently intubated and transferred to the medical intensive care unit. Portable roentogram revealed a large right-sided pneumothorax (Fig 1). Three attempts at right needle thoracostomy were performed without a notable rush of air or change in hemodynamics.\nThe thoracic surgery team was emergently consulted for chest tube placement. An air rush was noted upon entry in to the right hemithorax and the patient stabilized after chest tube placement. A sizable continuous air leak was noted upon chest tube insertion, as was a considerable amount of right anterior chest subcutaneous emphysema (SE) that tracked inferiorly from the infraclavicular sites of repeated attempts at needle thoracostomy (Figs 2 and 3a). Of note, the patient required high amounts of ventilator positive end-expiratory pressure to maintain adequate oxygenation. A 2-cm \"blowhole\" incision was made below the right clavicle through the skin and prepectoral fascia in an attempt to allow subcutaneous plethora decompression.\nNo appreciable change in body contour or crepitance was noted over the next 48 hours; however, the patient's severe SE, which had tracked inferiorly into the abdominal subcutaneous tissues, had stabilized (Fig 3b). A topical negative pressure wound therapy (NPWT) dressing (VAC dressing, KCI International, San Antonio, Tex) was inserted into the blowhole incision and set at a continuous suction of 100 mm Hg (Fig 4). Over the subsequent 48 hours. there was near-complete resolution of SE as supported by physical examination and repeat computed tomography scan (Fig 5). Over the ensuing 4 days, the patient stabilized and was ultimately extubated. An air leak persisted but was adequately controlled by the chest tube. The patient underwent definitive right upper lobe bullectomy approximately 3 weeks later to remove bullae ruptured during attempted needle decompression and chest tube placement. He was discharged in good condition on postoperative day number 6 after a right thoracotomy and right upper lobe bullectomy.",
+      "patient": {
+        "age_years": 70.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "The patient is a 70-year-old African American man with a history of bullous emphysema who presented with a 3-week history of severe left-sided chest pain to the emergency department. He had undergone a left upper lobe bullectomy at an outside associated institution 1 month prior to presentation for macrobullous emphysema with 4 prior spontaneous pneumothoraces. Chest computed tomography scan in the emergency department was unremarkable with no signs of pneumothorax, pulmonary embolism (PE), or pneumonia. Results from electrocardiographic and routine laboratory studies were within normal limits. The patient was admitted to the medical service for pain control and started on a patient controlled analgesia pump.\nApproximately 48 hours after admission, the patient experienced an acute increase in chest pain and became tachycardic, tachypneic, and desaturated to 60% by pulse oximeter on nonrebreather oxygen supplementation. He was emergently intubated and transferred to the medical intensive care unit. Portable roentogram revealed a large right-sided pneumothorax (Fig 1). Three attempts at right needle thoracostomy were performed without a notable rush of air or change in hemodynamics.\nThe thoracic surgery team was emergently consulted for chest tube placement. An air rush was noted upon entry in to the right hemithorax and the patient stabilized after chest tube placement. A sizable continuous air leak was noted upon chest tube insertion, as was a considerable amount of right anterior chest subcutaneous emphysema (SE) that tracked inferiorly from the infraclavicular sites of repeated attempts at needle thoracostomy (Figs 2 and 3a). Of note, the patient required high amounts of ventilator positive end-expiratory pressure to maintain adequate oxygenation. A 2-cm \"blowhole\" incision was made below the right clavicle through the skin and prepectoral fascia in an attempt to allow subcutaneous plethora decompression.\nNo appreciable change in body contour or crepitance was noted over the next 48 hours; however, the patient's severe SE, which had tracked inferiorly into the abdominal subcutaneous tissues, had stabilized (Fig 3b). A topical negative pressure wound therapy (NPWT) dressing (VAC dressing, KCI International, San Antonio, Tex) was inserted into the blowhole incision and set at a continuous suction of 100 mm Hg (Fig 4). Over the subsequent 48 hours. there was near-complete resolution of SE as supported by physical examination and repeat computed tomography scan (Fig 5). Over the ensuing 4 days, the patient stabilized and was ultimately extubated. An air leak persisted but was adequately controlled by the chest tube. The patient underwent definitive right upper lobe bullectomy approximately 3 weeks later to remove bullae ruptured during attempted needle decompression and chest tube placement. He was discharged in good condition on postoperative day number 6 after a right thoracotomy and right upper lobe bullectomy."
+      },
+      "assessment": {
+        "diagnosis_primary": "Case report: treatment of severe subcutaneous emphysema with a negative pressure wound therapy dressing"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2627309_eplasty09e01_fig4_undivided_1_1.webp",
+        "caption": "Portable roentogram demonstrates resolution of subcutaneous emphysema approximately 48 hours following application of topical negative pressure wound therapy dressing (white arrow)."
+      },
+      "summary": {
+        "one_liner": "Portable roentogram demonstrates resolution of subcutaneous emphysema approximately 48 hours following application of topical negative pressure wound therapy dressing (white arrow).",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2627309",
+        "pmid": "19198645",
+        "doi": null,
+        "article_title": "Case report: treatment of severe subcutaneous emphysema with a negative pressure wound therapy dressing",
+        "journal": "Eplasty",
+        "year": "2009",
+        "authors": [
+          "Christopher M Sciortino",
+          "Gerhard S Mundinger",
+          "David P Kuwayama",
+          "Stephen C Yang",
+          "Marc S Sussman"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2627309/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2629461_1757-1626-2-54-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2629461_01",
+      "image_id": "file_0010136",
+      "diagnosis": "A 70-year-old male having advanced prostate cancer presenting with hypercalcemia and diffuse osteoblastic bone metastases: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 70.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2629461_1757-1626-2-54-1_undivided_1_1.webp",
+      "case_text": "A 70-year-old man presented with poor appetite and general malaise of two month's duration. Physical examination revealed mildly distended abdomen and hypoactive bowel sounds. Hemogram showed high white blood cell count (22070/mul) with 91.5% segment form and low hemoglobin level (7.0 g/dl). Biochemical examination showed elevated serum calcium level (2.7 mmole/l). Urinary analysis showed hematuria (numerous red blood cells per high power field in sediment examination). The serum prostate-specific antigen (PSA) was 100 ng/ml. A chest radiograph (figure 1) showed diffuse osteoblastic bone lesions. In addition to dilated bowel loops with feces, an abdominal radiograph (figure 2) showed multiple patchy osteoblastic changes of bones. A malignant disease with multiple osteoblastic bone metastases was highly suspected. Finally, prostate cancer was diagnosed with a prostate needle biopsy. He received bilateral orchiectomy and hormone therapy for stage IV disease. Unfortunately, he passed away 1 month later because of urosepsis.",
+      "patient": {
+        "age_years": 70.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 70-year-old man presented with poor appetite and general malaise of two month's duration. Physical examination revealed mildly distended abdomen and hypoactive bowel sounds. Hemogram showed high white blood cell count (22070/mul) with 91.5% segment form and low hemoglobin level (7.0 g/dl). Biochemical examination showed elevated serum calcium level (2.7 mmole/l). Urinary analysis showed hematuria (numerous red blood cells per high power field in sediment examination). The serum prostate-specific antigen (PSA) was 100 ng/ml. A chest radiograph (figure 1) showed diffuse osteoblastic bone lesions. In addition to dilated bowel loops with feces, an abdominal radiograph (figure 2) showed multiple patchy osteoblastic changes of bones. A malignant disease with multiple osteoblastic bone metastases was highly suspected. Finally, prostate cancer was diagnosed with a prostate needle biopsy. He received bilateral orchiectomy and hormone therapy for stage IV disease. Unfortunately, he passed away 1 month later because of urosepsis."
+      },
+      "assessment": {
+        "diagnosis_primary": "A 70-year-old male having advanced prostate cancer presenting with hypercalcemia and diffuse osteoblastic bone metastases: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2629461_1757-1626-2-54-1_undivided_1_1.webp",
+        "caption": "Chest radiograph showing osteoblastic changes of spine, scapulae, clavicles and ribs (arrow: right 4th rib with more conspicuous change)."
+      },
+      "summary": {
+        "one_liner": "Chest radiograph showing osteoblastic changes of spine, scapulae, clavicles and ribs (arrow: right 4th rib with more conspicuous change).",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2629461",
+        "pmid": "19144185",
+        "doi": "10.1186/1757-1626-2-54",
+        "article_title": "A 70-year-old male having advanced prostate cancer presenting with hypercalcemia and diffuse osteoblastic bone metastases: a case report",
+        "journal": "Cases J",
+        "year": "2009",
+        "authors": [
+          "Wan-Hsiu Liao",
+          "Sheng-Hsiang Lin",
+          "Tsu-Tuan Wu"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2629461/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2630954_1752-1947-3-7-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2630954_01",
+      "image_id": "file_0010163",
+      "diagnosis": "Atypical right diaphragmatic hernia (hernia of Morgagni), spigelian hernia and epigastric hernia in a patient with Williams syndrome: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 49.0,
+      "gender": "Female",
+      "image_url": "/demo-cases/PMC2630954_1752-1947-3-7-1_undivided_1_1.webp",
+      "case_text": "This 49-year-old woman with Williams syndrome, cognitive impairment and aortic stenosis presented to the physicians with right-sided chest pain. In the past, she had undergone repair of her right spigelian and epigastric hernias. Her abdominal examination was unremarkable. Chest - X-ray (Figure 1) suggested right-sided diaphragmatic hernia and pleural effusion for which she received treatment. Pleural aspirate showed neutrophils, lymphocytes and reactive mesothelial cells. There were no malignant cells. A computed tomography (CT) scan (Figure 2) showed a diaphragmatic hernia with some collapse/consolidation of the adjacent lung.\nShe was considered to be a high-risk patient for general anaesthesia. Her endotracheal intubation was difficult because of her small mouth, receding chin and short neck and she required a bougie to guide the endotracheal tube. In addition to her aortic stenosis, she also had a significantly dilated left atrium, mild mitral stenosis with mild regurgitation, pulmonary hypertension and markedly dilated coronary sinus. The left ventricle was concentrically hypertrophied and the ejection fraction was > 50%. The peak and mean gradients across the aortic valve were 52.7 and 29.5 mmHg, respectively. The electrocardiogram (ECG) showed sinus rhythm with partial right bundle branch block (RBBB) and minor inferior and lateral T wave changes. Despite her significant comorbidities, her persistent symptoms warranted surgical intervention and laparoscopic surgery was preferable to an open repair. So she underwent laparoscopic repair (Figure 3) of her congenital diaphragmatic hernia. Transverse colon and omentum were reduced from the right chest into the abdomen. Intraperitoneal gortex sutures were used to close the defect and the defect was reinforced with surgical porcine mesh and prolene. She made a quick and uneventful postoperative recovery.",
+      "patient": {
+        "age_years": 49.0,
+        "sex": "Female",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "This 49-year-old woman with Williams syndrome, cognitive impairment and aortic stenosis presented to the physicians with right-sided chest pain. In the past, she had undergone repair of her right spigelian and epigastric hernias. Her abdominal examination was unremarkable. Chest - X-ray (Figure 1) suggested right-sided diaphragmatic hernia and pleural effusion for which she received treatment. Pleural aspirate showed neutrophils, lymphocytes and reactive mesothelial cells. There were no malignant cells. A computed tomography (CT) scan (Figure 2) showed a diaphragmatic hernia with some collapse/consolidation of the adjacent lung.\nShe was considered to be a high-risk patient for general anaesthesia. Her endotracheal intubation was difficult because of her small mouth, receding chin and short neck and she required a bougie to guide the endotracheal tube. In addition to her aortic stenosis, she also had a significantly dilated left atrium, mild mitral stenosis with mild regurgitation, pulmonary hypertension and markedly dilated coronary sinus. The left ventricle was concentrically hypertrophied and the ejection fraction was > 50%. The peak and mean gradients across the aortic valve were 52.7 and 29.5 mmHg, respectively. The electrocardiogram (ECG) showed sinus rhythm with partial right bundle branch block (RBBB) and minor inferior and lateral T wave changes. Despite her significant comorbidities, her persistent symptoms warranted surgical intervention and laparoscopic surgery was preferable to an open repair. So she underwent laparoscopic repair (Figure 3) of her congenital diaphragmatic hernia. Transverse colon and omentum were reduced from the right chest into the abdomen. Intraperitoneal gortex sutures were used to close the defect and the defect was reinforced with surgical porcine mesh and prolene. She made a quick and uneventful postoperative recovery."
+      },
+      "assessment": {
+        "diagnosis_primary": "Atypical right diaphragmatic hernia (hernia of Morgagni), spigelian hernia and epigastric hernia in a patient with Williams syndrome: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2630954_1752-1947-3-7-1_undivided_1_1.webp",
+        "caption": "Chest radiograph (posterior-anterior and lateral view). An anterior diaphragmatic hernia containing some elements of the right colon. The heart and mediastinal contours show no gross abnormality. No obvious hilar mass. No lobar collapse or consolidation. No obvious intrapulmonary mass."
+      },
+      "summary": {
+        "one_liner": "Chest radiograph (posterior-anterior and lateral view). An anterior diaphragmatic hernia containing some elements of the right colon. The heart and mediastinal contours show no gross abnormality. No obvious hilar mass. No lobar collapse or consolidation. No obvious intrapulmonary mass.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2630954",
+        "pmid": "19128471",
+        "doi": "10.1186/1752-1947-3-7",
+        "article_title": "Atypical right diaphragmatic hernia (hernia of Morgagni), spigelian hernia and epigastric hernia in a patient with Williams syndrome: a case report",
+        "journal": "J Med Case Rep",
+        "year": "2009",
+        "authors": [
+          "Farhan Rashid",
+          "Ramakrishna Chaparala",
+          "Javed Ahmed",
+          "Syed Y Iftikhar"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2630954/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2632616_1757-1626-2-29-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2632616_01",
+      "image_id": "file_0010222",
+      "diagnosis": "Locked lung by looped hernia: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 44.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2632616_1757-1626-2-29-1_undivided_1_1.webp",
+      "case_text": "A 44 year old Caucasian male was referred by his primary care physician for a recurrent asymptomatic left sided massive pleural effusion. The pleural effusion was first discovered on a chest X-ray obtained to follow-up his left 8th, 9th and 10th rib fractures from an accidental fall. The effusion was recurrent over one and a half month even after drainage with thoracentesis and chest tube placement (Fig. 1 &2). The initial chest X-ray immediately after his fall that revealed the acute fractures did not show any pleural effusion or blunting of costophrenic angles (Fig. 3). The patient had no significant past medical history, denied recent travel, but admitted to smoking tobacco and consuming alcohol. The patient worked, as a maintenance man, but at the time of presentation was unemployed.\nAt presentation the patient had normal vital signs with an oxygen saturation of 93% on room air. Physical examination revealed an average built man in no apparent distress, non-labored breathing, central trachea, absent breath sounds with a stony dull percussion note on the left hemi thorax. Abdomen was soft and non tender with a palpable liver 10 cm below the costal margin. Laboratory investigation revealed mild anemia, hypoalbuminemia (3.1 gm/dL), normal BUN, creatinine, electrolytes and urine analysis. Arterial blood gas (ABG) analysis showed pH 7.48, PaCO2 34 mm Hg, PaO2 63 mm Hg, HCO3 25 mEq/L, oxygen saturation 93% on room air. Pleural fluid study showed lactate dehydrogenase (LDH) 112 U/L, pH 7.80, WBC 76, Polymorphs 40%, Eosinophil 1%, glucose 139 mg/dL, albumin 0.90 gm/dL, RBC 1300/mm3, amylase 169 U/L, pleural fluid - serum LDH ratio was 0.48. Pleural fluid gram stain, cultures (aerobic, anaerobic, AFB, fungal) and cytology were all negative. Computerized tomography of chest showed the massive left-sided unilateral pleural effusion with complete collapse of the left upper and lower lobes, but no pulmonary embolism or malignancy. (Fig. 4 &5). Echocardiogram was normal. Ultrasound of abdomen was remarkable for fatty liver, but no ascites. Magnetic resonance cholangio-pancreatography (MRCP) showed normal pancreas and biliary system without ascites. Tuberculin skin test, ANA, ANCA, AMA, ceruloplasmin, TSH, HIV, RPR, and Hepatitis virus serology were normal. Due to frequent massive re-accumulation a diagnostic and therapeutic video assisted thoracoscopy (VATS) procedure was performed, which revealed a 2 cm diaphragmatic hernia with inflamed, friable, incarcerated omentum and small amount of bowel. This inflamed omentum was determined to be the etiology for the recurrent pleural effusion. About 3.5 liters of pleural fluid was removed by VATS. Histopathology was consistent with moderately inflamed omentum. Hernia was repaired and talc-pleurodesis was performed. There was no re-accumulation on follow-up over 2 years (Fig. 6).",
+      "patient": {
+        "age_years": 44.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 44 year old Caucasian male was referred by his primary care physician for a recurrent asymptomatic left sided massive pleural effusion. The pleural effusion was first discovered on a chest X-ray obtained to follow-up his left 8th, 9th and 10th rib fractures from an accidental fall. The effusion was recurrent over one and a half month even after drainage with thoracentesis and chest tube placement (Fig. 1 &2). The initial chest X-ray immediately after his fall that revealed the acute fractures did not show any pleural effusion or blunting of costophrenic angles (Fig. 3). The patient had no significant past medical history, denied recent travel, but admitted to smoking tobacco and consuming alcohol. The patient worked, as a maintenance man, but at the time of presentation was unemployed.\nAt presentation the patient had normal vital signs with an oxygen saturation of 93% on room air. Physical examination revealed an average built man in no apparent distress, non-labored breathing, central trachea, absent breath sounds with a stony dull percussion note on the left hemi thorax. Abdomen was soft and non tender with a palpable liver 10 cm below the costal margin. Laboratory investigation revealed mild anemia, hypoalbuminemia (3.1 gm/dL), normal BUN, creatinine, electrolytes and urine analysis. Arterial blood gas (ABG) analysis showed pH 7.48, PaCO2 34 mm Hg, PaO2 63 mm Hg, HCO3 25 mEq/L, oxygen saturation 93% on room air. Pleural fluid study showed lactate dehydrogenase (LDH) 112 U/L, pH 7.80, WBC 76, Polymorphs 40%, Eosinophil 1%, glucose 139 mg/dL, albumin 0.90 gm/dL, RBC 1300/mm3, amylase 169 U/L, pleural fluid - serum LDH ratio was 0.48. Pleural fluid gram stain, cultures (aerobic, anaerobic, AFB, fungal) and cytology were all negative. Computerized tomography of chest showed the massive left-sided unilateral pleural effusion with complete collapse of the left upper and lower lobes, but no pulmonary embolism or malignancy. (Fig. 4 &5). Echocardiogram was normal. Ultrasound of abdomen was remarkable for fatty liver, but no ascites. Magnetic resonance cholangio-pancreatography (MRCP) showed normal pancreas and biliary system without ascites. Tuberculin skin test, ANA, ANCA, AMA, ceruloplasmin, TSH, HIV, RPR, and Hepatitis virus serology were normal. Due to frequent massive re-accumulation a diagnostic and therapeutic video assisted thoracoscopy (VATS) procedure was performed, which revealed a 2 cm diaphragmatic hernia with inflamed, friable, incarcerated omentum and small amount of bowel. This inflamed omentum was determined to be the etiology for the recurrent pleural effusion. About 3.5 liters of pleural fluid was removed by VATS. Histopathology was consistent with moderately inflamed omentum. Hernia was repaired and talc-pleurodesis was performed. There was no re-accumulation on follow-up over 2 years (Fig. 6)."
+      },
+      "assessment": {
+        "diagnosis_primary": "Locked lung by looped hernia: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2632616_1757-1626-2-29-1_undivided_1_1.webp",
+        "caption": "Chest X-ray (PA view): Re-accumulation of massive left sided pleural effusion (arrow)."
+      },
+      "summary": {
+        "one_liner": "Chest X-ray (PA view): Re-accumulation of massive left sided pleural effusion (arrow).",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2632616",
+        "pmid": "19133147",
+        "doi": "10.1186/1757-1626-2-29",
+        "article_title": "Locked lung by looped hernia: a case report",
+        "journal": "Cases J",
+        "year": "2009",
+        "authors": [
+          "Abu-Ahmed Z Rahman",
+          "Mukta Panda"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2632616/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2633272_1746-160X-5-3-3_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2633272_01",
+      "image_id": "file_0010244",
+      "diagnosis": "Carotid artery injury from an airgun pellet: a case report and review of the literature",
+      "diagnosis_label_source": "publication_title",
+      "age": 20.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2633272_1746-160X-5-3-3_undivided_1_1.webp",
+      "case_text": "A 20-year old male presented to the Emergency Department having been accidentally shot in the neck, by a friend using a 0.22 calibre air rifle, at a distance of approximately three metres. He complained of neck stiffness and pain on swallowing. Examination revealed an entry wound 1 cm below the level of the thyroid notch to the left of the midline, figure 1. A tense, non-pulsatile haematoma was evident deep to the entry wound. No bleeding or surgical emphysema were present. His voice was hoarse, although flexible endoscopic examination showed no pharyngeal or laryngeal abnormality. Cervical spine radiographs demonstrated an airgun pellet antero-lateral to the transverse process of C6, with a surrounding 6 cm diameter radiopacity consistent with haematoma and no deviation of the trachea, figure 2.\nPrimary resuscitation was uneventful, and the patient was taken to theatre within four hours for exploration of the wound and evacuation of the haematoma. Upon evacuation of the haematoma extensive haemorrhage developed from a defect in the anterior wall of the external carotid artery, which required rapid access and surgical repair. The airgun pellet was localised using image intensification and successfully retrieved from the paraspinous muscles, figure 3.\nThe pellet tract traversed the left lobe of the thyroid gland and the carotid sheath, impacting on the antero-medial aspect of the external carotid artery, just above the bifurcation, figure 4. It further traversed the paraspinous muscles and embedded immediately anterior to the transverse process of the sixth cervical vertebrae, at a depth of 8 cm from the skin entry wound.\nInitial recovery was uneventful, however at follow-up it was clear that the patient had Horner's syndrome from injury to the left cervical sympathetic chain and carotid arteries.",
+      "patient": {
+        "age_years": 20.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 20-year old male presented to the Emergency Department having been accidentally shot in the neck, by a friend using a 0.22 calibre air rifle, at a distance of approximately three metres. He complained of neck stiffness and pain on swallowing. Examination revealed an entry wound 1 cm below the level of the thyroid notch to the left of the midline, figure 1. A tense, non-pulsatile haematoma was evident deep to the entry wound. No bleeding or surgical emphysema were present. His voice was hoarse, although flexible endoscopic examination showed no pharyngeal or laryngeal abnormality. Cervical spine radiographs demonstrated an airgun pellet antero-lateral to the transverse process of C6, with a surrounding 6 cm diameter radiopacity consistent with haematoma and no deviation of the trachea, figure 2.\nPrimary resuscitation was uneventful, and the patient was taken to theatre within four hours for exploration of the wound and evacuation of the haematoma. Upon evacuation of the haematoma extensive haemorrhage developed from a defect in the anterior wall of the external carotid artery, which required rapid access and surgical repair. The airgun pellet was localised using image intensification and successfully retrieved from the paraspinous muscles, figure 3.\nThe pellet tract traversed the left lobe of the thyroid gland and the carotid sheath, impacting on the antero-medial aspect of the external carotid artery, just above the bifurcation, figure 4. It further traversed the paraspinous muscles and embedded immediately anterior to the transverse process of the sixth cervical vertebrae, at a depth of 8 cm from the skin entry wound.\nInitial recovery was uneventful, however at follow-up it was clear that the patient had Horner's syndrome from injury to the left cervical sympathetic chain and carotid arteries."
+      },
+      "assessment": {
+        "diagnosis_primary": "Carotid artery injury from an airgun pellet: a case report and review of the literature"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2633272_1746-160X-5-3-3_undivided_1_1.webp",
+        "caption": "Intra-operative image intensification views showing air gun pellet anterior to transverse process of C6 vertebra."
+      },
+      "summary": {
+        "one_liner": "Intra-operative image intensification views showing air gun pellet anterior to transverse process of C6 vertebra.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2633272",
+        "pmid": "19149904",
+        "doi": "10.1186/1746-160X-5-3",
+        "article_title": "Carotid artery injury from an airgun pellet: a case report and review of the literature",
+        "journal": "Head Face Med",
+        "year": "2009",
+        "authors": [
+          "Syed Abad",
+          "Ian Ds McHenry",
+          "Lachlan M Carter",
+          "David A Mitchell"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2633272/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2635121_1757-1626-2-67-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2635121_01",
+      "image_id": "file_0010267",
+      "diagnosis": "Congenital lobar emphysema: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": null,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2635121_1757-1626-2-67-1_undivided_1_1.webp",
+      "case_text": "A 22nd day old male neonate from a village Raina of the Burdwan district was referred to pediatrics emergency ward for respiratory difficulty for last1 week. There was no history of cyanosis, jaundice, convulsion and sign of heart failure.\nHe was from a poor socioeconomic status family,\nAntenatal history of mother was uneventful, Ultrasonography was not done at that time. Baby was normally delivered in a rural hospital. Immediate postnatal period was normal.\nBaby was breast fed and immunized at par.\nOn examination the baby was found in mild respiratory difficulty, respiration rate was 80 per minute, heart rate 130 per minute, facies normal, weight was 3.0 kg, length 55 cm and head circumference 35 cm. There was no cyanosis, jaundice or any signs of heart failure.\nExamination of respiratory system revealed less movement of left upper chest, trachea was shifted to the right, vocal resonance was decreased in left side and on auscultation diminished breath sound was found on left side.\nOther systems appeared normal.\nChest X-ray showed marked overdistension of the the left upper lobe with mediastinal shift to the right and collapse of the ipsilateral remaining lung field (Figure 1). On lateral view,\nThe heart was displaced posteriorly with retrosternal luscency representing an anteriorly herniated lobe(Figure 2).\nCT scan showed a hyperluscent, hyper extended lobe (attenuated but intact pattern of organized vascularity) with midline substantial herniation, compression of the remaining lung and the mediastinum is significantly shifted away from the side of the abnormal lobe (Figure 3 and 4).",
+      "patient": {
+        "age_years": null,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 22nd day old male neonate from a village Raina of the Burdwan district was referred to pediatrics emergency ward for respiratory difficulty for last1 week. There was no history of cyanosis, jaundice, convulsion and sign of heart failure.\nHe was from a poor socioeconomic status family,\nAntenatal history of mother was uneventful, Ultrasonography was not done at that time. Baby was normally delivered in a rural hospital. Immediate postnatal period was normal.\nBaby was breast fed and immunized at par.\nOn examination the baby was found in mild respiratory difficulty, respiration rate was 80 per minute, heart rate 130 per minute, facies normal, weight was 3.0 kg, length 55 cm and head circumference 35 cm. There was no cyanosis, jaundice or any signs of heart failure.\nExamination of respiratory system revealed less movement of left upper chest, trachea was shifted to the right, vocal resonance was decreased in left side and on auscultation diminished breath sound was found on left side.\nOther systems appeared normal.\nChest X-ray showed marked overdistension of the the left upper lobe with mediastinal shift to the right and collapse of the ipsilateral remaining lung field (Figure 1). On lateral view,\nThe heart was displaced posteriorly with retrosternal luscency representing an anteriorly herniated lobe(Figure 2).\nCT scan showed a hyperluscent, hyper extended lobe (attenuated but intact pattern of organized vascularity) with midline substantial herniation, compression of the remaining lung and the mediastinum is significantly shifted away from the side of the abnormal lobe (Figure 3 and 4)."
+      },
+      "assessment": {
+        "diagnosis_primary": "Congenital lobar emphysema: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2635121_1757-1626-2-67-1_undivided_1_1.webp",
+        "caption": "Chest X-ray PA view. Chest X-ray showed marked overdistension of the the left upper lobe with mediastinal shift to the right and collapse of the ipsilateral remaining lung field."
+      },
+      "summary": {
+        "one_liner": "Chest X-ray PA view. Chest X-ray showed marked overdistension of the the left upper lobe with mediastinal shift to the right and collapse of the ipsilateral remaining lung field.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2635121",
+        "pmid": "19154591",
+        "doi": "10.1186/1757-1626-2-67",
+        "article_title": "Congenital lobar emphysema: a case report",
+        "journal": "Cases J",
+        "year": "2009",
+        "authors": [
+          "Asok Kumar Datta",
+          "Syamali Mandal",
+          "Jadab Kumar Jana"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2635121/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2642787_1757-1626-2-86-1_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2642787_01",
+      "image_id": "file_0010440",
+      "diagnosis": "Posterior lung herniation after a coughing spell: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 72.0,
+      "gender": "Male",
+      "image_url": "/demo-cases/PMC2642787_1757-1626-2-86-1_undivided_1_1.webp",
+      "case_text": "A 72-year-old white male presented to the emergency center with a complaint of right-sided chest pain. He had been treated over the past month for bronchitis with persistent coughing. During a recent coughing spell he developed severe right-sided chest pain and a palpable bulge with localized ecchymosis. The pain worsened and became relentless 12 hours before his visit to the emergency center.\nHis past medical history was significant for obesity, diabetes, hypertension and renal insufficiency. He quit smoking a few years ago and he remembered sustaining a right-sided rib fracture secondary to a fall five years ago. Vital signs were normal on admission; however, discomfort was obvious especially with coughing or movement. Chest exam revealed a painful, palpable bulge with ecchymosis in right posterior chest wall, which enlarged with coughing. The remainder of his physical exam was unremarkable except for moderate central obesity and a small reducible umbilical hernia.\nChest radiography revealed a radiolucent shadow in the right lower posterior chest wall at the level of the diaphragm consistent with an intercostals lung herniation (Fig 1). There was no evidence of a right-sided pneumothorax. There were old healed fractures of the right 8th and 9th ribs with minimal deformity. Comparison films from previous admissions confirmed the new finding of a right-sided lucency. Computer tomography of the chest confirmed the findings of the CXR and revealed a posterolateral right lung herniation (Fig 2).\nDue to the increasing pain and concern for incarceration, the patient was taken urgently to the operating room for repair. Utilizing a 10 cm posterolateral muscle-sparing thoracotomy incision, we entered the right chest through the 5th intercostal space. Exploration revealed a 4 cm x 2 cm posterior intercostal defect between the 8th and 9th ribs extending anteriorly in a less well defined manner in the form of attenuated intercostal musculature. The diaphragm formed a cul-de-sac with this area of lax intercostal muscles. The lung had spontaneously reduced and its evaluation revealed a mildly indurated area with no hemorrhage or necrosis.\nA piece of polypropylene mesh was fashioned to cover the defect with good overlap. Using number 2 polypropylene sutures (Ethicon, Inc.; Somerville, NJ) and a GORE Suture Passer (Gore, Inc.; Newark, DE), the needle was inserted intrathoracically through the polypropylene mesh and back out through the chest for external tying at the subcutaneous plane. Excellent tension-free repair of the defect was achieved. The diaphragm was re-approximated to the chest wall to complete the repair by obliterating the cul-de-sac described above. A single chest tube was placed and the thoracotomy incision closed. The patient did well post operatively and was discharged from hospital without further sequelae on postoperative day six. At follow-up, the patient remains alive with no hernia recurrence at 5 years.",
+      "patient": {
+        "age_years": 72.0,
+        "sex": "Male",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 72-year-old white male presented to the emergency center with a complaint of right-sided chest pain. He had been treated over the past month for bronchitis with persistent coughing. During a recent coughing spell he developed severe right-sided chest pain and a palpable bulge with localized ecchymosis. The pain worsened and became relentless 12 hours before his visit to the emergency center.\nHis past medical history was significant for obesity, diabetes, hypertension and renal insufficiency. He quit smoking a few years ago and he remembered sustaining a right-sided rib fracture secondary to a fall five years ago. Vital signs were normal on admission; however, discomfort was obvious especially with coughing or movement. Chest exam revealed a painful, palpable bulge with ecchymosis in right posterior chest wall, which enlarged with coughing. The remainder of his physical exam was unremarkable except for moderate central obesity and a small reducible umbilical hernia.\nChest radiography revealed a radiolucent shadow in the right lower posterior chest wall at the level of the diaphragm consistent with an intercostals lung herniation (Fig 1). There was no evidence of a right-sided pneumothorax. There were old healed fractures of the right 8th and 9th ribs with minimal deformity. Comparison films from previous admissions confirmed the new finding of a right-sided lucency. Computer tomography of the chest confirmed the findings of the CXR and revealed a posterolateral right lung herniation (Fig 2).\nDue to the increasing pain and concern for incarceration, the patient was taken urgently to the operating room for repair. Utilizing a 10 cm posterolateral muscle-sparing thoracotomy incision, we entered the right chest through the 5th intercostal space. Exploration revealed a 4 cm x 2 cm posterior intercostal defect between the 8th and 9th ribs extending anteriorly in a less well defined manner in the form of attenuated intercostal musculature. The diaphragm formed a cul-de-sac with this area of lax intercostal muscles. The lung had spontaneously reduced and its evaluation revealed a mildly indurated area with no hemorrhage or necrosis.\nA piece of polypropylene mesh was fashioned to cover the defect with good overlap. Using number 2 polypropylene sutures (Ethicon, Inc.; Somerville, NJ) and a GORE Suture Passer (Gore, Inc.; Newark, DE), the needle was inserted intrathoracically through the polypropylene mesh and back out through the chest for external tying at the subcutaneous plane. Excellent tension-free repair of the defect was achieved. The diaphragm was re-approximated to the chest wall to complete the repair by obliterating the cul-de-sac described above. A single chest tube was placed and the thoracotomy incision closed. The patient did well post operatively and was discharged from hospital without further sequelae on postoperative day six. At follow-up, the patient remains alive with no hernia recurrence at 5 years."
+      },
+      "assessment": {
+        "diagnosis_primary": "Posterior lung herniation after a coughing spell: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2642787_1757-1626-2-86-1_undivided_1_1.webp",
+        "caption": "Chest Radiograph shows lung tissue outside thoracic cavity."
+      },
+      "summary": {
+        "one_liner": "Chest Radiograph shows lung tissue outside thoracic cavity.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2642787",
+        "pmid": "19171045",
+        "doi": "10.1186/1757-1626-2-86",
+        "article_title": "Posterior lung herniation after a coughing spell: a case report",
+        "journal": "Cases J",
+        "year": "2009",
+        "authors": [
+          "Kenneth M Jastrow 3rd",
+          "Danny Chu",
+          "Dawn Jaroszewski",
+          "Joseph Huh",
+          "Faisal Bakaeen"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2642787/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  },
+  {
+    "file": "PMC2645425_1745-6673-4-2-3_undivided_1_1.webp",
+    "payload": {
+      "case_id": "PMC2645425_01",
+      "image_id": "file_0010459",
+      "diagnosis": "Refractory cardiopulmonary failure after glyphosate surfactant intoxication: a case report",
+      "diagnosis_label_source": "publication_title",
+      "age": 57.0,
+      "gender": "Female",
+      "image_url": "/demo-cases/PMC2645425_1745-6673-4-2-3_undivided_1_1.webp",
+      "case_text": "A 57-year-old woman with a medical history of Grave's disease and breast infiltrating ductal carcinoma, which was treated with a radical mastectomy, was brought to the emergency department by ambulance within 50 minutes after unconsciousness found by family. She had attempted suicide by ingesting estimated 400 ml of nian-nian-chun (Chinese brand name for glyphosate surfactant) but her family did not known the exact time of ingestion. This product contains 41% glyphosate isopropylamine and 15% polyoxyethyleneamine. On admission, the patient was in a state of drowsy consciousness, had a Glasgow Coma Scale (GCS) of E1V1M2, and was diaphoretic, incontinent, and vomiting. Her vital signs on admission to the emergency department were as follows: blood pressure, 120/70 mm Hg; pulse, 87 beats/min; respiration, 22 breaths/min; and temperature, 35 C. Physical examination showed an injected throat, oral ulcers, blood-tinged saliva, crackles on chest auscultation, cold extremities, and unremarkable findings concerning the head, neck, heart, genital organs, and rectum. Serum benzodiazepine, alcohol and organophosphate and urinary paraquet concentrations were examined to excluded other drugs related unconsciousness. The results of laboratory studies at emergency department were as follows: non-fasting plasma glucose, 156 mg/dL; creatinine, 1.2 mg/dL; leukocytes, 11600/mul; segmented neutrophils, 74.4%; and potassium, 5.6 mEq/L. Gastric irrigation was performed after ingestion for one hour, but no obvious herbicide was detected. The patient regained consciousness (GCS: E3V5M6) in 30 minutes at emergency department, but shock and respiratory failure developed in 5 hours after admission to the hospital. A blood gas analysis before endotracheal intubation showed mixed metabolic and respiratory acidosis (pH: 7.223; PCO2: 30.8 mm Hg; HCO3: 12.8 mmol/L; BE: - 12.9 mmol/L). She was transferred to the intensive care unit, mechanically ventilated, and treated according to the critical care principle. The hyperkalemia was corrected with insulin/glucose infusion and kayexalate ingestion. The serum level of potassium decreased to 3.4 mEq/L on the second day of admission. The acidemia was corrected by intermittent sodium bicarbonate infusion (Figure 1). However, refractory shock persisted despite the administration of fluids, dopamine, vasopressin, epinephrine, and norepinephrine. A low ratio of FiO2 to PaO2 (Figure 2) and bilateral lung infiltration (Figure 3) developed. Non-sustained ventricular tachycardia developed on the third day of admission. Amiodarone was loaded with 150 mg. There was no more ventricular arrhythmia but pulseless electric activity was noted. Cardiopulmonary resuscitation was performed for 30 minutes but there was no spontaneous pulse. The patient died 3 days after being admitted to the hospital.",
+      "patient": {
+        "age_years": 57.0,
+        "sex": "Female",
+        "comorbidities": [],
+        "medications": []
+      },
+      "presentation": {
+        "hpi": "A 57-year-old woman with a medical history of Grave's disease and breast infiltrating ductal carcinoma, which was treated with a radical mastectomy, was brought to the emergency department by ambulance within 50 minutes after unconsciousness found by family. She had attempted suicide by ingesting estimated 400 ml of nian-nian-chun (Chinese brand name for glyphosate surfactant) but her family did not known the exact time of ingestion. This product contains 41% glyphosate isopropylamine and 15% polyoxyethyleneamine. On admission, the patient was in a state of drowsy consciousness, had a Glasgow Coma Scale (GCS) of E1V1M2, and was diaphoretic, incontinent, and vomiting. Her vital signs on admission to the emergency department were as follows: blood pressure, 120/70 mm Hg; pulse, 87 beats/min; respiration, 22 breaths/min; and temperature, 35 C. Physical examination showed an injected throat, oral ulcers, blood-tinged saliva, crackles on chest auscultation, cold extremities, and unremarkable findings concerning the head, neck, heart, genital organs, and rectum. Serum benzodiazepine, alcohol and organophosphate and urinary paraquet concentrations were examined to excluded other drugs related unconsciousness. The results of laboratory studies at emergency department were as follows: non-fasting plasma glucose, 156 mg/dL; creatinine, 1.2 mg/dL; leukocytes, 11600/mul; segmented neutrophils, 74.4%; and potassium, 5.6 mEq/L. Gastric irrigation was performed after ingestion for one hour, but no obvious herbicide was detected. The patient regained consciousness (GCS: E3V5M6) in 30 minutes at emergency department, but shock and respiratory failure developed in 5 hours after admission to the hospital. A blood gas analysis before endotracheal intubation showed mixed metabolic and respiratory acidosis (pH: 7.223; PCO2: 30.8 mm Hg; HCO3: 12.8 mmol/L; BE: - 12.9 mmol/L). She was transferred to the intensive care unit, mechanically ventilated, and treated according to the critical care principle. The hyperkalemia was corrected with insulin/glucose infusion and kayexalate ingestion. The serum level of potassium decreased to 3.4 mEq/L on the second day of admission. The acidemia was corrected by intermittent sodium bicarbonate infusion (Figure 1). However, refractory shock persisted despite the administration of fluids, dopamine, vasopressin, epinephrine, and norepinephrine. A low ratio of FiO2 to PaO2 (Figure 2) and bilateral lung infiltration (Figure 3) developed. Non-sustained ventricular tachycardia developed on the third day of admission. Amiodarone was loaded with 150 mg. There was no more ventricular arrhythmia but pulseless electric activity was noted. Cardiopulmonary resuscitation was performed for 30 minutes but there was no spontaneous pulse. The patient died 3 days after being admitted to the hospital."
+      },
+      "assessment": {
+        "diagnosis_primary": "Refractory cardiopulmonary failure after glyphosate surfactant intoxication: a case report"
+      },
+      "study": {
+        "modality": "X-ray",
+        "body_region": "Chest",
+        "view_position": "frontal",
+        "image_url": "/demo-cases/PMC2645425_1745-6673-4-2-3_undivided_1_1.webp",
+        "caption": "Infiltration over bilateral lung fields."
+      },
+      "summary": {
+        "one_liner": "Infiltration over bilateral lung fields.",
+        "key_points": [],
+        "red_flags": []
+      },
+      "outcome": {
+        "success": "",
+        "detail": "Outcome has not been curated for this demo record. Refer to the source case report."
+      },
+      "provenance": {
+        "dataset_name": "MultiCaRe public demo subset",
+        "pmc_id": "PMC2645425",
+        "pmid": "19178755",
+        "doi": "10.1186/1745-6673-4-2",
+        "article_title": "Refractory cardiopulmonary failure after glyphosate surfactant intoxication: a case report",
+        "journal": "J Occup Med Toxicol",
+        "year": "2009",
+        "authors": [
+          "Chirn-Bin Chang",
+          "Chia-Chu Chang"
+        ],
+        "license": "CC BY",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2645425/",
+        "dataset_source": "https://zenodo.org/records/20416562"
+      },
+      "tags": {
+        "ml_labels": [
+          "thorax",
+          "radiology",
+          "frontal",
+          "x_ray"
+        ],
+        "gt_labels": [],
+        "keywords": null
+      }
+    }
+  }
+]

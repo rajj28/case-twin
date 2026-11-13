@@ -49,8 +49,18 @@ Set `VITE_API_URL` for the backend and optionally `VITE_IMAGE_BASE_URL` for rela
 
 ## Prototype limitations
 
-Clinical note extraction includes regex heuristics. Ranking scores and profile completeness are not calibrated diagnostic probabilities. Image comparison currently includes simulated fallback bounding boxes when localization fails; these are not verified findings. Hospital search can use generated fallback results; verify them independently. This prototype is for research and demonstration, not clinical decision-making.
+Clinical note extraction includes regex heuristics. Ranking scores and profile completeness are not calibrated diagnostic probabilities. Image comparison displays model-produced bounding boxes only; missing coordinates remain unknown. Hospital search can use generated fallback results; verify them independently. This prototype is for research and demonstration, not clinical decision-making.
 
 ## License
 
 MIT. See [LICENSE](LICENSE) for the required copyright and permission notice.
+
+## Free demo deployment
+
+The `Dockerfile.free` builds React and serves it alongside FastAPI on a single Render Free web service. `render.yaml` explicitly selects the Free plan. Model inference runs on the separate Hugging Face ZeroGPU Space defined in `deployment/hf-space`, using the original MedGemma and MedSigLIP models. Set `HF_SPACE_ID`, `HF_TOKEN`, `QDRANT_URL`, `QDRANT_API_KEY`, and `COLLECTION_NAME` as server secrets/settings. Never put credentials in `VITE_*` variables.
+
+ZeroGPU has a daily GPU allowance; requests stop when that allowance is exhausted. Render Free services sleep after inactivity. No paid inference fallback is configured.
+
+The free deployment uses OpenStreetMap for hospital locations and source websites, OSRM for available drive-time estimates, and hospital website structured data for named clinicians. It does not assert equipment availability or fabricated capability percentages. Gemini/You.com generation is not used in this deployment. The original agent-based discovery remains available only in the original deployment mode with its separate provider setup.
+
+`public/demo-cases` contains 12 attributed public chest-X-ray cases from MultiCaRe 3.0.1, separate from the original project's unavailable corpus. Individual selected article licenses are CC BY; see `public/demo-cases/NOTICE.md` for source/collection licensing and attribution. Index this subset with `python scripts/index_demo_data.py` after the model Space is running. The script creates only `chest_xrays_demo`, retains existing points, and never deletes another collection. Publication titles are used as case labels; outcomes have not been curated.

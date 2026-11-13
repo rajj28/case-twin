@@ -1,0 +1,7 @@
+torch==2.8.0
+transformers==4.57.1
+accelerate>=1.2,<2
+spaces
+pillow>=10,<13
+sentencepiece
+protobuf>=6.31.1,<7

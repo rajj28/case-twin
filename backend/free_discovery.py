@@ -1,0 +1,148 @@
+"""Source-backed facility search without paid search APIs or generated locations."""
+import functools
+import ipaddress
+import json
+import math
+import re
+import socket
+import threading
+import time
+from urllib.parse import urljoin, urlparse
+import requests
+from bs4 import BeautifulSoup
+
+HEADERS = {"User-Agent": "CaseTwin-Research-Demo/1.0 (https://github.com/rajj28/case-twin)"}
+_geocode_lock = threading.Lock()
+_last_geocode = 0.0
+
+@functools.lru_cache(maxsize=128)
+def locate(location):
+    global _last_geocode
+    parts = (location or "").split(",")
+    if len(parts) == 2:
+        try:
+            lat, lng = map(float, parts)
+            if -90 <= lat <= 90 and -180 <= lng <= 180:
+                return lat, lng
+        except ValueError:
+            pass
+    if not location:
+        raise ValueError("Enter a city or latitude,longitude to search hospitals.")
+    with _geocode_lock:
+        time.sleep(max(0, 1.05 - (time.monotonic() - _last_geocode)))
+        response = requests.get("https://nominatim.openstreetmap.org/search", params={"q": location, "format": "json", "limit": 1}, headers=HEADERS, timeout=15)
+        _last_geocode = time.monotonic()
+    response.raise_for_status()
+    results = response.json()
+    if not results:
+        raise ValueError("Location was not found. Try a city name or latitude,longitude.")
+    return float(results[0]["lat"]), float(results[0]["lon"])
+
+def distance_km(a, b, c, d):
+    lat1, lat2 = math.radians(a), math.radians(c)
+    value = math.sin((lat2-lat1)/2)**2 + math.cos(lat1)*math.cos(lat2)*math.sin(math.radians(d-b)/2)**2
+    return 6371 * 2 * math.asin(min(1, math.sqrt(value)))
+
+@functools.lru_cache(maxsize=64)
+def _nearby(lat, lng, radius, cache_period):
+    query = f'[out:json][timeout:25];nwr(around:{radius},{lat},{lng})["amenity"="hospital"];out center tags;'
+    response = requests.post("https://overpass-api.de/api/interpreter", data={"data": query}, headers=HEADERS, timeout=35)
+    response.raise_for_status()
+    return response.json().get("elements", [])
+
+def find_hospitals(diagnosis, location, equipment=None, max_travel=None, max_distance=None):
+    lat, lng = locate(location)
+    miles = float(max_distance or 50)
+    radius = max(1000, min(100000, round(miles * 1609.344)))
+    elements = _nearby(round(lat, 5), round(lng, 5), radius, int(time.time() // 3600))
+    ranked = []
+    for element in elements:
+        tags = element.get("tags", {})
+        name = tags.get("name") or tags.get("name:en")
+        if not name:
+            continue
+        center = element.get("center", element)
+        x, y = center.get("lat"), center.get("lon")
+        if x is None or y is None:
+            continue
+        distance = distance_km(lat, lng, x, y)
+        source = f'https://www.openstreetmap.org/{element["type"]}/{element["id"]}'
+        specialty = tags.get("healthcare:speciality", "").replace(";", ", ")
+        reason = f"Hospital listed in OpenStreetMap, {distance:.1f} km straight-line distance from the search location."
+        if specialty:
+            reason += " Listed specialties: " + specialty + "."
+        if equipment:
+            reason += " Requested equipment/capabilities require confirmation with the facility."
+        url = tags.get("website") or tags.get("contact:website") or source
+        ranked.append((distance, {"name": name, "url": url, "capability": "Unverified", "travel": "Not available", "reason": reason, "lat": x, "lng": y, "source_url": source, "phone": tags.get("phone", tags.get("contact:phone", "")), "verified_capabilities": [], "distance_km": round(distance, 2)}))
+    ranked.sort(key=lambda item: item[0])
+    centers = []
+    seen = set()
+    for _, center in ranked:
+        if center["name"].casefold() in seen:
+            continue
+        seen.add(center["name"].casefold())
+        try:
+            response = requests.get(f'https://router.project-osrm.org/route/v1/driving/{lng},{lat};{center["lng"]},{center["lat"]}', params={"overview": "false"}, headers=HEADERS, timeout=8)
+            data = response.json() if response.ok else {}
+            if data.get("routes"):
+                seconds = float(data["routes"][0]["duration"])
+                if max_travel and seconds > float(max_travel) * 3600:
+                    continue
+                minutes = max(1, round(seconds / 60))
+                center["travel"] = f"{minutes//60}h {minutes%60}m" if minutes >= 60 else f"{minutes}m"
+        except (requests.RequestException, ValueError, KeyError):
+            pass
+        centers.append(center)
+        if len(centers) == 6:
+            break
+    return {"centers": centers, "user_location": {"lat": lat, "lng": lng}, "source": "OpenStreetMap contributors (ODbL)", "capability_verification": "Required capabilities are not verified by this directory search."}
+
+def _public_url(url):
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https") or not parsed.hostname or parsed.username or parsed.password:
+        raise ValueError("Provide a public hospital website URL.")
+    addresses = socket.getaddrinfo(parsed.hostname, parsed.port or (443 if parsed.scheme == "https" else 80))
+    if not addresses or not all(ipaddress.ip_address(entry[4][0]).is_global for entry in addresses):
+        raise ValueError("Only public hospital websites can be inspected.")
+    return url
+
+def find_physicians(url, diagnosis, hospital_name, location=""):
+    current = _public_url(url)
+    for _ in range(4):
+        response = requests.get(current, headers=HEADERS, timeout=15, stream=True, allow_redirects=False)
+        if response.is_redirect:
+            current = _public_url(urljoin(current, response.headers.get("Location", "")))
+            response.close()
+            continue
+        response.raise_for_status()
+        if "text/html" not in response.headers.get("Content-Type", ""):
+            response.close()
+            return {"specialists": [], "source_url": current, "message": "The hospital URL did not return an HTML directory."}
+        chunks=[];size=0
+        for chunk in response.iter_content(65536):
+            size+=len(chunk)
+            if size > 2_000_000:break
+            chunks.append(chunk)
+        response.close()
+        soup=BeautifulSoup(b"".join(chunks),"html.parser")
+        people=[]
+        def visit(value):
+            if isinstance(value,list):
+                for item in value:visit(item)
+            elif isinstance(value,dict):
+                kinds=value.get("@type",[])
+                kinds=[kinds] if isinstance(kinds,str) else kinds
+                if any(k in ("Physician","Person") for k in kinds) and value.get("name"):
+                    if "Physician" in kinds or value.get("medicalSpecialty") or re.match(r"Dr\.?\s",value["name"]):
+                        specialty=value.get("medicalSpecialty") or "Not documented"
+                        if not isinstance(specialty,str):specialty="Not documented"
+                        people.append({"name":value["name"],"specialty":specialty,"credentials":value.get("honorificSuffix", "Not documented"),"context":f"Listed in structured data on {hospital_name or 'the hospital website'}. Confirm specialty and availability directly.","url":urljoin(current,value.get("url") or current),"phone":value.get("telephone","")})
+                for key,item in value.items():
+                    if isinstance(item,(list,dict)):visit(item)
+        for script in soup.find_all("script",type="application/ld+json"):
+            try:visit(json.loads(script.string or script.get_text()))
+            except (json.JSONDecodeError,TypeError):continue
+        unique={person["name"]:person for person in people}
+        return {"specialists":list(unique.values())[:5],"source_url":current,"message":"Only named clinicians found in the website's structured data are included." if unique else "No named clinicians were found in this page's structured data. Open the hospital's physician directory directly."}
+    raise ValueError("Hospital website redirected too many times.")

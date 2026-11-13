@@ -8,8 +8,8 @@ GET  /health   — health check.
 import os
 from dotenv import load_dotenv
 load_dotenv()
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "casetwin"
+os.environ.setdefault("LANGCHAIN_TRACING_V2", "false")
+os.environ.setdefault("LANGCHAIN_PROJECT", "casetwin")
 
 import io
 import json
@@ -122,6 +122,13 @@ async def compare_insights(
         
     # Read matched image
     match_pil = None
+    if match_image_url and match_image_url.startswith("/demo-cases/"):
+        from pathlib import Path
+        frontend_dir = Path(os.getenv("FRONTEND_DIST", Path(__file__).resolve().parents[1] / "dist")).resolve()
+        demo_dir = (frontend_dir / "demo-cases").resolve()
+        local_image = (frontend_dir / match_image_url.lstrip("/")).resolve()
+        if local_image.is_relative_to(demo_dir) and local_image.is_file():
+            match_pil = Image.open(local_image).convert("RGB")
     if match_image_url and match_image_url.startswith("http"):
         try:
             async with httpx.AsyncClient() as client:
@@ -149,7 +156,9 @@ async def compare_insights(
     def parse_box(text):
         m = re.search(r'\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]', text)
         if m:
-            return [int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))]
+            box = [int(m.group(i)) for i in range(1, 5)]
+            if 0 <= box[0] < box[2] <= 1000 and 0 <= box[1] < box[3] <= 1000:
+                return box
         return None
         
     # Helper to describe the box position
@@ -194,41 +203,11 @@ async def compare_insights(
         except Exception as e:
             print(f"MedGemma match box extraction error: {e}")
             
-    # Fallback to simulated bounding boxes if model fails or doesn't support coordinates
-    if not orig_box or not match_box:
-        # Generate pseudo-random deterministic coordinates based on diagnosis and URL
-        import hashlib
-        hash_input = f"{match_diagnosis}-{match_image_url or 'local'}".encode()
-        h = int(hashlib.md5(hash_input).hexdigest()[:8], 16)
-        
-        # Base ranges
-        y_center = 200 + (h % 500)
-        x_center = 200 + ((h // 500) % 500)
-        box_size = 150 + (h % 200)
-        
-        if not orig_box:
-            orig_box = [
-                max(0, y_center - box_size//2),
-                max(0, x_center - box_size//2),
-                min(1000, y_center + box_size//2),
-                min(1000, x_center + box_size//2)
-            ]
-        if not match_box:
-            # Shift match box slightly
-            y_shift = -50 + (h % 100)
-            x_shift = -50 + ((h // 100) % 100)
-            match_box = [
-                max(0, orig_box[0] + y_shift),
-                max(0, orig_box[1] + x_shift),
-                min(1000, orig_box[2] + y_shift),
-                min(1000, orig_box[3] + x_shift)
-            ]
+    # Missing model coordinates remain unknown; never synthesize annotations.
 
     orig_region = get_region_text(orig_box) if orig_box else "the affected region"
     match_region = get_region_text(match_box) if match_box else "the affected region"
     
-    import re
-
     # Build a tight prompt that forces a single, concise, non-repeating output
     hpi = parsed_payload.get("presentation", {}).get("hpi", "")
     outcome = parsed_payload.get("outcome", {}).get("detail", "")
@@ -307,6 +286,16 @@ async def search_hospitals(
     import httpx
     import json
     
+    if os.getenv("DISCOVERY_PROVIDER") == "osm":
+        import asyncio
+        from free_discovery import find_hospitals
+        try:
+            return await asyncio.to_thread(find_hospitals, diagnosis, location, equipment, maxTravelTime, maxDistance)
+        except ValueError as error:
+            raise HTTPException(status_code=400, detail=str(error))
+        except Exception:
+            raise HTTPException(status_code=503, detail="Public hospital directory is temporarily unavailable. Try again later.")
+
     ydc_api_key = os.getenv("YDC_API_KEY")
     if not ydc_api_key:
         raise HTTPException(status_code=500, detail="YDC_API_KEY environment variable is missing.")
@@ -1326,6 +1315,15 @@ async def analyze_hospital_page(
     specializing in the given diagnosis.
     """
     import asyncio
+    if os.getenv("DISCOVERY_PROVIDER") == "osm":
+        from free_discovery import find_physicians
+        try:
+            return await asyncio.to_thread(find_physicians, url, diagnosis, hospital_name, location)
+        except ValueError as error:
+            raise HTTPException(status_code=400, detail=str(error))
+        except Exception:
+            raise HTTPException(status_code=503, detail="The hospital directory could not be inspected. Open the hospital website directly.")
+
     import agents
     
     print(f"[{datetime.now().strftime('%H:%M:%S')}] [analyze_hospital_page] Received request for {hospital_name} (location: {location})")
@@ -1340,3 +1338,8 @@ async def analyze_hospital_page(
         traceback.print_exc()
         print(f"Agent endpoint failed: {e}")
         return {"specialists": [], "error": str(e)}
+
+
+# Mount after API routes, so SPA navigation cannot shadow clinical endpoints.
+from frontend import mount_frontend
+mount_frontend(app)

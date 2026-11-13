@@ -57,8 +57,8 @@ export async function searchByImage(file: File, profile?: CaseProfile, limit = 1
 
 export interface ComparisonInsights {
   insights_text: string;
-  original_box: [number, number, number, number]; // [ymin, xmin, ymax, xmax] max=1000
-  match_box: [number, number, number, number];
+  original_box: [number, number, number, number] | null; // Model-produced coordinates only.
+  match_box: [number, number, number, number] | null;
 }
 
 export async function compareInsights(originalImage: File, matchItem: MatchItem): Promise<ComparisonInsights> {

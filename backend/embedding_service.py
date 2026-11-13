@@ -39,13 +39,7 @@ load_dotenv()
 _hf_token = os.getenv("HF_TOKEN")
 HF_TOKEN: str = (_hf_token or "").strip()
 
-if _hf_token and _hf_token != "YOUR_HF_TOKEN_HERE":
-    try:
-        from huggingface_hub import login
-        login(token=_hf_token, add_to_git_credential=False)
-        print("[EmbeddingService] HuggingFace login successful.")
-    except Exception as e:
-        print(f"[EmbeddingService] HuggingFace login failed: {e}")
+# Server requests pass the token in headers. Do not persist it with Hub login.
 
 # ---------------------------------------------------------------------------
 # Endpoint configuration
@@ -54,7 +48,7 @@ if _hf_token and _hf_token != "YOUR_HF_TOKEN_HERE":
 MEDGEMMA_ENDPOINT: str = os.getenv("MEDGEMMA_ENDPOINT", "").strip()
 HF_INFERENCE_ENDPOINT = os.getenv("MEDSIGLIP_ENDPOINT")
 
-if not HF_INFERENCE_ENDPOINT:
+if not HF_INFERENCE_ENDPOINT and not os.getenv("HF_SPACE_ID"):
     print("[EmbeddingService] WARNING: MEDSIGLIP_ENDPOINT is not set in .env")
 
 # Dimension returned when we fall back to zeros (matches MedSiglip-448 dims).
@@ -147,6 +141,9 @@ def query_medgemma(image: Image.Image, prompt: str = "Describe this chest X-ray.
     Send an image + text prompt to the MedGemma endpoint and return the raw
     JSON response.  Raises httpx.HTTPStatusError on non-2xx replies.
     """
+    if os.getenv("HF_SPACE_ID"):
+        from hf_space import generate
+        return generate(image, prompt, max_tokens, stop_sequences)
     if not MEDGEMMA_ENDPOINT:
         raise RuntimeError("Set MEDGEMMA_ENDPOINT in .env")
 
@@ -251,6 +248,10 @@ def generate_embedding(image: Image.Image) -> list[float]:
          Falls back to a zero-vector if MedGemma returns text instead.
       3. If neither endpoint is configured, raises RuntimeError.
     """
+    if os.getenv("HF_SPACE_ID"):
+        from hf_space import embed_image
+        return embed_image(image)
+
     # --- Priority 1: Remote MedSiglip endpoint ---
     if HF_INFERENCE_ENDPOINT:
         return generate_embedding_remote(image)

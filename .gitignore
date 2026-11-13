@@ -48,3 +48,8 @@ ingest_cxr.py
 .deploy.env
 .deploy.env.*
 !.deploy.env.example
+
+# Local deployment state and downloaded demo corpus
+.deployment/
+.superdesign/
+.local-data/

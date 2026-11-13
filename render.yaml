@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: case-twin
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile.free
+    healthCheckPath: /health
+    autoDeployTrigger: off
+    envVars:
+      - key: HF_SPACE_ID
+        value: rajj28/case-twin-models
+      - key: HF_TOKEN
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: COLLECTION_NAME
+        value: chest_xrays_demo
+      - key: DISCOVERY_PROVIDER
+        value: osm
+      - key: LANGCHAIN_TRACING_V2
+        value: "false"

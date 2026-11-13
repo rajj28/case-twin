@@ -56,3 +56,6 @@ docs/
 # Local deployment credentials
 .deploy.env
 .deploy.env.*
+.deployment/
+.superdesign/
+.local-data/

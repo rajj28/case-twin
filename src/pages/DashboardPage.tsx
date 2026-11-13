@@ -572,8 +572,8 @@ function MatchesScreen({
   const [insightsLoading, setInsightsLoading] = useState(false);
   const [insights, setInsights] = useState<{
     insights_text: string;
-    original_box: [number, number, number, number];
-    match_box: [number, number, number, number];
+    original_box: [number, number, number, number] | null;
+    match_box: [number, number, number, number] | null;
   } | null>(null);
 
   // Clear insights if the selected match has changed
@@ -607,7 +607,8 @@ function MatchesScreen({
   };
 
   // Helper to render bounding boxes over an image
-  const renderBoxOverlay = (box: [number, number, number, number]) => {
+  const renderBoxOverlay = (box: [number, number, number, number] | null) => {
+    if (!box) return null;
     // box is [ymin, xmin, ymax, xmax] max=1000
     const [ymin, xmin, ymax, xmax] = box;
     const top = `${(ymin / 1000) * 100}%`;
@@ -982,9 +983,9 @@ function CenterRow({ center, onClick, condensed }: { center: RouteCenter, onClic
           <span className="text-[12px] font-medium text-zinc-500 uppercase tracking-wider">Capability</span>
           <div className="flex items-center gap-2">
             <span className="text-zinc-900 font-medium text-[14px]">{center.capability}</span>
-            <span className="h-1.5 w-12 rounded-full bg-zinc-100 overflow-hidden border border-zinc-200/50">
+            {/^[0-9]+%$/.test(center.capability) && <span className="h-1.5 w-12 rounded-full bg-zinc-100 overflow-hidden border border-zinc-200/50">
               <span className="block h-full rounded-full bg-[var(--mr-action)] transition-all" style={{ width: center.capability }} />
-            </span>
+            </span>}
           </div>
         </div>
       )}
@@ -1001,7 +1002,7 @@ function CenterRow({ center, onClick, condensed }: { center: RouteCenter, onClic
 
       {!condensed && (
         <div className="flex flex-col gap-1">
-          <span className="text-[12px] font-medium text-zinc-500 uppercase tracking-wider">AI Rationale</span>
+          <span className="text-[12px] font-medium text-zinc-500 uppercase tracking-wider">Source details</span>
           <p className="text-zinc-600 text-[13px] line-clamp-2 leading-relaxed">{center.reason}</p>
         </div>
       )}
