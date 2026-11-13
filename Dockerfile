@@ -1,5 +1,5 @@
 # -------------------------------------------------------
-# Clinova Frontend — React + Vite → nginx
+# CaseTwin Frontend — React + Vite → nginx
 # Two-stage build. Layer caching: package files copied
 # before source so npm ci only re-runs when deps change.
 # -------------------------------------------------------

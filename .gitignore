@@ -30,7 +30,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-clinova/*
+casetwin/*
 
 *.ipynb
 backend/test.py

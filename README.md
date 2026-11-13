@@ -1,8 +1,8 @@
-# Clinova
+# CaseTwin
 
 **From medical image to clinical context.**
 
-Clinova is a clinical research prototype that connects chest X-rays with similar published cases, compares their documented findings, and helps assemble specialist referral drafts.
+CaseTwin is a clinical research prototype that connects chest X-rays with similar published cases, compares their documented findings, and helps assemble specialist referral drafts.
 
 ## What it does
 

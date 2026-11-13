@@ -14,7 +14,7 @@
 .git/
 
 # Python virtual environment
-clinova/
+casetwin/
 backend/.venv/
 backend/venv/
 __pycache__/

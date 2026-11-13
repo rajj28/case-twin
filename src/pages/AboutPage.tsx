@@ -11,13 +11,13 @@ export function AboutPage() {
           <CardContent className="pt-6">
             <div className="mb-3 flex items-center gap-2">
               <Badge>About</Badge>
-              <span className="text-xs uppercase tracking-wide text-slate-500">Clinova</span>
+              <span className="text-xs uppercase tracking-wide text-slate-500">CaseTwin</span>
             </div>
             <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[28px]">
               Built for clinical routing teams that need clarity under time pressure.
             </h1>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
-              Clinova is a transfer support interface that compares incoming cases
+              CaseTwin is a transfer support interface that compares incoming cases
               with relevant historical patterns, highlights triage-fit facilities, and helps create
               structured handoff notes in a single flow.
             </p>

@@ -4,7 +4,7 @@ load_dotenv()
 
 # Set LangChain/LangSmith environment variables BEFORE importing crewai
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "clinova"
+os.environ["LANGCHAIN_PROJECT"] = "casetwin"
 if not os.getenv("LANGCHAIN_API_KEY"):
     print("WARNING: LANGCHAIN_API_KEY not found - LangSmith tracing will not work!")
 
@@ -271,7 +271,7 @@ Output ONLY the raw JSON array — no markdown, no preamble:
 
     @traceable(
         name="hospital_specialist_extraction",
-        project_name="clinova",
+        project_name="casetwin",
         metadata={"hospital": hospital_name, "diagnosis": diagnosis, "location": location, "url": url},
     )
     def run_crew():

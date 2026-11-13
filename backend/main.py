@@ -1,5 +1,5 @@
 """
-Clinova FastAPI backend.
+CaseTwin FastAPI backend.
 POST /search   — upload a chest X-ray image, get back similar cases from Qdrant.
 POST /extract  — extract a structured CaseProfile from images + clinical notes (mock).
 GET  /health   — health check.
@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "clinova"
+os.environ["LANGCHAIN_PROJECT"] = "casetwin"
 
 import io
 import json
@@ -26,7 +26,7 @@ from PIL import Image
 from embedding_service import generate_embedding, query_medgemma
 from qdrant_service import search_similar
 
-app = FastAPI(title="Clinova API", version="1.0.0")
+app = FastAPI(title="CaseTwin API", version="1.0.0")
 
 # Origins: comma-separated list injected via ALLOWED_ORIGINS env var in prod.
 # Falls back to localhost dev origins when the var is not set.
@@ -320,7 +320,7 @@ async def search_hospitals(
     import asyncio
     
     # Using a custom user agent as required by Nominatim's Terms of Service
-    geolocator = Nominatim(user_agent="clinova_medical_routing_bot")
+    geolocator = Nominatim(user_agent="casetwin_medical_routing_bot")
     
     user_lat, user_lng = 39.8283, -98.5795 # Default US Center
     search_location_str = location or 'United States'

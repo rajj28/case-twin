@@ -6,14 +6,14 @@ import { Separator } from "@/components/ui/separator";
 interface MemoViewerProps {
   sections: {
     presentingComplaint: string;
-    clinovaMatch: string;
+    caseTwinMatch: string;
     recommendedProtocol: string;
     logistics: string;
   };
 }
 
 export function MemoViewer({ sections }: MemoViewerProps) {
-  const memoText = `Presenting Complaint\n${sections.presentingComplaint}\n\nClinova Match\n${sections.clinovaMatch}\n\nRecommended Protocol\n${sections.recommendedProtocol}\n\nLogistics\n${sections.logistics}`;
+  const memoText = `Presenting Complaint\n${sections.presentingComplaint}\n\nCaseTwin Match\n${sections.caseTwinMatch}\n\nRecommended Protocol\n${sections.recommendedProtocol}\n\nLogistics\n${sections.logistics}`;
 
   const copyMemo = async () => {
     await navigator.clipboard.writeText(memoText);
@@ -36,8 +36,8 @@ export function MemoViewer({ sections }: MemoViewerProps) {
         </section>
         <Separator />
         <section className="space-y-1">
-          <h4 className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Clinova Match</h4>
-          <p className="text-sm leading-6 text-slate-700">{sections.clinovaMatch}</p>
+          <h4 className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">CaseTwin Match</h4>
+          <p className="text-sm leading-6 text-slate-700">{sections.caseTwinMatch}</p>
         </section>
         <Separator />
         <section className="space-y-1">

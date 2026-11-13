@@ -17,7 +17,7 @@ __pycache__/
 .venv/
 venv/
 env/
-../clinova/
+../casetwin/
 
 # Environment / secrets — inject via Cloud Run env vars instead
 .env

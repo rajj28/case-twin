@@ -17,9 +17,9 @@ export function AppShell({ breadcrumb, children }: AppShellProps) {
           <div className="flex items-center gap-8">
             <Link to="/" className="group flex items-center gap-2.5">
               <div className="flex h-8 w-8 items-center justify-center rounded-[0.4rem] bg-gradient-to-tr from-zinc-900 to-zinc-800 text-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] ring-1 ring-zinc-900/10 transition-transform duration-300 group-hover:scale-[1.03]">
-                <span className="text-[13px] font-bold tracking-wider">CL</span>
+                <span className="text-[13px] font-bold tracking-wider">CT</span>
               </div>
-              <span className="text-[16px] font-semibold tracking-tight text-zinc-900">Clinova</span>
+              <span className="text-[16px] font-semibold tracking-tight text-zinc-900">CaseTwin</span>
             </Link>
 
             <nav className="hidden md:flex items-center space-x-1">

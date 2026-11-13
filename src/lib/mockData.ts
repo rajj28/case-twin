@@ -135,7 +135,7 @@ export const triageFacilities: TriageFacility[] = [
 export const memoText = {
   presentingComplaint:
     "Patient with acute focal neurologic deficit, symptom onset estimated within 2 hours, NIHSS consistent with moderate-to-severe stroke pattern.",
-  clinovaMatch:
+  caseTwinMatch:
     "Top-matched historical cases suggest favorable outcomes when early thrombectomy pathway is initiated at a center with high-volume neuro-interventional capability.",
   recommendedProtocol:
     "Activate stroke transfer protocol, repeat perfusion imaging on arrival, maintain blood pressure within guideline window, and prepare endovascular suite standby.",

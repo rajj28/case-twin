@@ -1,4 +1,4 @@
-// Full Clinova case profile schema
+// Full CaseTwin case profile schema
 // Mirrors the JSON schema used by MedGemma extraction
 
 export interface CaseProfile {
