@@ -13,6 +13,7 @@ import {
     ChevronRight,
     Stethoscope,
     Activity,
+    Download,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { CaseProfile } from "@/lib/caseProfileTypes";
@@ -487,6 +488,29 @@ export function AgenticCopilotPanel({
                     </div>
                 </div>
             </div>
+
+            <section
+                aria-labelledby="sample-case-heading"
+                className="shrink-0 border-b border-blue-100 bg-blue-50/60 px-5 py-3"
+            >
+                <h3 id="sample-case-heading" className="text-sm font-semibold text-zinc-900">
+                    Try a sample case
+                </h3>
+                <p className="mt-1 text-xs leading-5 text-zinc-600">
+                    Unzip the download, attach the X-ray and clinical note below, click Send, then Matches.
+                </p>
+                <a
+                    href="/demo-cases/CaseTwin-Sample-Case.zip"
+                    download="CaseTwin-Sample-Case.zip"
+                    className="mt-2 inline-flex max-w-full items-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                    <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
+                    Download sample case
+                </a>
+                <p className="mt-2 text-[11px] leading-4 text-zinc-500">
+                    Public case PMC2249601 is included in the demo dataset.
+                </p>
+            </section>
 
             {/* ── Messages thread ── */}
             <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-5 py-4">
