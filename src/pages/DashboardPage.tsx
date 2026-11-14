@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState, useMemo, useEffect, type ButtonHTMLAttributes, type ReactNode } from "react";
 import { useDashboardStore } from "@/store/dashboardStore";
-import { Check, FileText, Loader2, MapPin, Settings2, Stethoscope, FolderOpen, Plus, HeartPulse, CloudOff, Scan, Microscope, Activity, ChevronLeft, Building2, X, Phone, ChevronRight } from "lucide-react";
+import { Check, FileText, Loader2, MapPin, Settings2, Stethoscope, FolderOpen, Plus, HeartPulse, CloudOff, Scan, Microscope, Activity, ChevronLeft, Building2, X, Phone, ChevronRight, PlayCircle } from "lucide-react";
 import { searchByImage, findHospitalsRoute } from "@/lib/mockUploadApis";
 import { computeProfileConfidence } from "@/lib/caseProfileUtils";
 
@@ -8,6 +8,7 @@ const API_BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
 import { type CaseProfile } from "@/lib/caseProfileTypes";
 import { CaseProfileView } from "@/components/CaseProfileView";
 import { AgenticCopilotPanel } from "@/components/AgenticCopilotPanel";
+import { DemoVideo } from "@/components/DemoVideo";
 import { TwinProfileModal } from "@/components/TwinProfileModal";
 import { TwinChatPanel } from "@/components/TwinChatPanel";
 import { cn } from "@/lib/utils";
@@ -331,31 +332,31 @@ function UploadScreen({
   return (
     <div
       ref={containerRef}
-      className="flex h-[calc(100vh-100px)] gap-0 pt-6"
+      className="case-intake-layout flex h-[calc(100vh-100px)] gap-0 pt-6"
       style={{ overflow: "hidden" }}
     >
       {/* ── Left: Live Case Profile ── */}
       <div
-        className="flex flex-col gap-4 overflow-hidden h-full pr-3 pb-6 relative"
+        className="case-profile-pane flex flex-col gap-4 overflow-hidden h-full pr-3 pb-6 relative"
         style={{ width: `${leftPct}%`, minWidth: 0 }}
       >
-        <div className="rounded-2xl border border-zinc-200/80 bg-white shadow-sm overflow-hidden flex flex-col flex-1 h-full min-h-0">
+        <div className="case-profile-surface rounded-2xl border border-zinc-200/80 bg-white shadow-sm overflow-hidden flex flex-col flex-1 h-full min-h-0">
           {/* Header Section (Always Visible) */}
           <div className="px-8 pt-8 pb-5 border-b border-zinc-100 bg-zinc-50/50 flex items-start justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200 bg-white shadow-sm">
-                <FileText className="h-5 w-5 text-zinc-700" />
+                {profile && conf.score > 0 ? <FileText className="h-5 w-5 text-zinc-700" /> : <PlayCircle className="h-6 w-6 text-blue-600" />}
               </div>
               <div>
-                <h2 className="text-[22px] font-semibold tracking-tight text-zinc-900 leading-none">Case Profile</h2>
+                <h2 className="text-[22px] font-semibold tracking-tight text-zinc-900 leading-none">{profile && conf.score > 0 ? "Case Profile" : "Watch the demo"}</h2>
                 <p className="mt-1.5 flex items-center gap-1.5 text-[13px] font-medium text-zinc-500">
-                  <Stethoscope className="h-3.5 w-3.5 text-[var(--mr-action)]" /> MedGemma Extracted
+                  {profile && conf.score > 0 ? <><Stethoscope className="h-3.5 w-3.5 text-[var(--mr-action)]" /> MedGemma Extracted</> : "3-minute product walkthrough"}
                 </p>
               </div>
             </div>
 
             {/* Inline Extraction Quality */}
-            <div className="flex flex-col items-end">
+            <div className={cn("flex-col items-end", profile && conf.score > 0 ? "flex" : "hidden")}>
               <span className={cn(
                 "text-[12px] font-semibold px-2 py-0.5 rounded-md border",
                 conf.score >= 80 ? "bg-emerald-50 text-emerald-700 border-emerald-200" : conf.score >= 50 ? "bg-amber-50 text-amber-700 border-amber-200" : "bg-zinc-100 text-zinc-700 border-zinc-200"
@@ -378,30 +379,8 @@ function UploadScreen({
                 />
               </div>
             ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-zinc-50/20 group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-zinc-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-                <div className="flex flex-col items-center justify-center gap-5 text-center max-w-[320px] relative z-10 transition-transform duration-500 group-hover:-translate-y-1">
-                  <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-sm border border-zinc-200/60 ring-4 ring-white">
-                    <div className="absolute inset-0 rounded-2xl bg-zinc-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <HeartPulse className="h-8 w-8 text-zinc-400 group-hover:text-rose-500 transition-colors duration-500" strokeWidth={1.5} />
-                    <div className="absolute -bottom-1.5 -right-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-sm border border-zinc-200/60">
-                      <FileText className="h-3.5 w-3.5 text-zinc-400" />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <h3 className="text-[17px] font-semibold text-zinc-900 tracking-tight">Case Profile Empty</h3>
-                    <p className="text-[14px] leading-relaxed text-zinc-500">
-                      Talk to the Copilot on the right. Share patient evidence, labs, and imaging to watch the intelligent case profile automatically appear here.
-                    </p>
-                  </div>
-
-                  <div className="mt-2 flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200/60 shadow-sm text-[13px] font-medium text-zinc-500 transition-all duration-300 group-hover:shadow-md group-hover:border-zinc-300/60">
-                    <Loader2 className="w-3.5 h-3.5 animate-[spin_3s_linear_infinite] text-zinc-400" />
-                    Waiting for evidence...
-                  </div>
-                </div>
+              <div className="p-4 sm:p-6">
+                <DemoVideo />
               </div>
             )}
           </div>
@@ -410,7 +389,7 @@ function UploadScreen({
 
       {/* ── Drag Divider ── */}
       <div
-        className="group relative z-10 flex w-3 shrink-0 cursor-col-resize items-center justify-center"
+        className="case-intake-divider group relative z-10 flex w-3 shrink-0 cursor-col-resize items-center justify-center"
         onMouseDown={onDividerMouseDown}
       >
         <div className="h-full w-px bg-[var(--mr-border)] transition-colors group-hover:bg-[var(--mr-action)]" />
@@ -423,7 +402,7 @@ function UploadScreen({
 
       {/* ── Right: Full-height Agentic Copilot ── */}
       <div
-        className="relative flex h-full min-h-[500px] flex-col pl-3"
+        className="case-copilot-pane relative flex h-full min-h-[500px] flex-col pl-3"
         style={{ width: `${100 - leftPct}%`, minWidth: 0 }}
       >
         <AgenticCopilotPanel

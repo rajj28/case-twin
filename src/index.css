@@ -359,3 +359,29 @@
     width: calc(100% - 1.25rem);
   }
 }
+/* Keep the walkthrough immediately visible and the intake usable on phones. */
+@media (max-width: 767px) {
+  .case-intake-layout {
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto !important;
+    padding-top: 0;
+    height: calc(100dvh - 100px);
+  }
+  .case-profile-pane, .case-copilot-pane {
+    width: 100% !important;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  .case-profile-pane { height: auto !important; }
+  .case-profile-surface {
+    height: auto !important;
+    max-height: calc(100dvh - 8rem);
+    flex: 0 0 auto;
+  }
+  .case-intake-divider { display: none; }
+  .case-copilot-pane {
+    height: calc(100dvh - 8rem) !important;
+    min-height: 560px !important;
+  }
+}

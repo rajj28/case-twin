@@ -68,3 +68,5 @@ The free deployment uses OpenStreetMap for hospital locations and source website
 ## Judge sample download
 
 The Clinical Copilot includes **Download sample case**, an attributed ZIP containing `CaseTwin-Sample-Xray.webp` and `Clinical-note.txt`. Unzip it, attach both files in the Copilot, click **Send**, then **Matches**. This public case is already indexed as PMC2249601; self-retrieval tests the workflow, not diagnostic accuracy. Regenerate the bundle with `python scripts/build_sample_case.py`.
+
+The opening screen prominently embeds the original CaseTwin video walkthrough above the empty case profile. On phones, the video and Copilot stack vertically so the player is visible on arrival. Video playback is served by YouTube, with a direct watch link as a fallback.
